@@ -1,0 +1,32 @@
+name: Croatia
+ranking: 12
+champions: 0
+year: 0
+coach: Zlatko Dalić
+players:
+Dominik Livakovic (GK)
+Ivica Ivusic (GK)
+Ivo Grbic (GK)
+Domagoj Vida (DF)
+Dejan Lovren (DF)
+Borna Barisic (DF)
+Josip Juranovic (DF)
+Josko Gvardiol (DF)
+Borna Sosa (DF)
+Josip Stanisic (DF)
+Martin Erlic (DF)
+Josip Sutalo (DF)
+Luka Modric (MF)
+Mateo Kovacic (MF)
+Marcelo Brozovic (MF)
+Mario Pasalic (MF)
+Nikola Vlasic (MF)
+Lovro Majer (MF)
+Kristijan Jakic (MF)
+Luka Sucic (MF)
+Ivan Perisic (ST)
+Andrej Kramaric (ST)
+Bruno Petkovic (ST)
+Mislav Orsic (ST)
+Ante Budimir (ST)
+Marko Livaja (ST)

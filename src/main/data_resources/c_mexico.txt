@@ -1,0 +1,31 @@
+name: Mexico
+ranking: 13
+champions: 0
+year: 0
+coach: Gerardo Martino
+players:
+Guillermo Ochoa (GK)
+Rodolfo Cota (GK)
+Alfredo Talavera (GK)
+Nestro Araujo (DF)
+Jesus Gallardo (DF)
+Gerardo Artega (DF)
+Hector Moreno (DF)
+Jorge Sanchez (DF)
+Johan Vazquez (DF)
+Cesar Montes (DF)
+Kevin Alvarez (DF)
+Erick Gutierrez (MF)
+Orbelin Peneda (MF)
+Hector Herrera (MF)
+Andres Guardado (MF)
+Roberto Alvarado (MF)
+Edson Alvarez (MF)
+Luis Chavez (MF)
+Uriel Antuna (MF)
+Luis Romo (MF)
+Hirving Lozano (ST)
+Rogelio Fuenes Mori (ST)
+Henry Martin (ST)
+Raul Jimenez (ST)
+Alexis Vega (ST)

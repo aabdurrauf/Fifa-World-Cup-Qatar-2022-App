@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.ScrollPane?>
+<SplitPane dividerPositions="0.508355614973262" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spormusabakatakipuygulamasi.GruplarController">
+   <items>
+      <AnchorPane>
+         <children>
+            <MenuButton alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Gruplar" AnchorPane.leftAnchor="14.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#AGrubMenu" text="A Grubu" />
+                  <MenuItem mnemonicParsing="false" onAction="#BGrubMenu" text="B Grubu" />
+                  <MenuItem mnemonicParsing="false" onAction="#CGrubMenu" text="C Grubu" />
+                  <MenuItem mnemonicParsing="false" onAction="#DGrubMenu" text="D Grubu" />
+                  <MenuItem mnemonicParsing="false" onAction="#EGrubMenu" text="E Grubu" />
+                  <MenuItem mnemonicParsing="false" onAction="#FGrubMenu" text="F Grubu" />
+                  <MenuItem mnemonicParsing="false" onAction="#GGrubMenu" text="G Grubu" />
+                  <MenuItem mnemonicParsing="false" onAction="#HGrubMenu" text="H Grubu" />
+               </items>
+            </MenuButton>
+            <SplitPane dividerPositions="0.5" layoutY="52.0" orientation="VERTICAL" prefHeight="346.0" prefWidth="302.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="countries" prefHeight="169.6" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="nameColumn" prefWidth="112.80001527070999" style="-fx-font-size: 16;" text="Takımlar" />
+                              <TableColumn fx:id="win" prefWidth="75.0" style="-fx-font-size: 16;" text="Galibiyet" />
+                              <TableColumn fx:id="draw" prefWidth="75.0" style="-fx-font-size: 16;" text="Beraberlik" />
+                              <TableColumn fx:id="lose" prefWidth="75.0" style="-fx-font-size: 16;" text="Mağlubiyet" />
+                              <TableColumn fx:id="goalscored" prefWidth="75.0" style="-fx-font-size: 16;" text="Attığı Goller" />
+                              <TableColumn fx:id="goalconceded" prefWidth="75.0" style="-fx-font-size: 16;" text="Yediği Goller" />
+                              <TableColumn fx:id="pointColumn" prefWidth="106.39996337890625" style="-fx-font-size: 16;" text="Puanlar" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="maclar_tablosu2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="169.6" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="Ateam2" prefWidth="75.0" style="-fx-alignment: CENTER; -fx-font-size: 15;" />
+                              <TableColumn fx:id="date_score2" prefWidth="75.0" style="-fx-alignment: CENTER; -fx-font-size: 12;" text="Tarih - Sonuç" />
+                              <TableColumn fx:id="Bteam2" prefWidth="75.0" style="-fx-alignment: CENTER; -fx-font-size: 15;" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Text fx:id="group_name" layoutX="110.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="110.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TabPane layoutX="137.0" layoutY="119.0" prefHeight="372.8" prefWidth="410.4" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Ülke 1">
+                     <content>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                          </content>
+                        </ScrollPane>
+                     </content>
+                     <content>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                          </content>
+                        </ScrollPane>
+                     </content>
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="country01" editable="false" layoutX="14.0" layoutY="112.0" prefHeight="258.0" prefWidth="291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="112.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                              <ImageView fx:id="flag1" fitHeight="85.0" fitWidth="137.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Ülke 2">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="country02" editable="false" layoutY="111.0" prefHeight="258.0" prefWidth="291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="111.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></TextArea>
+                              <ImageView fx:id="flag2" fitHeight="85.0" fitWidth="137.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Ülke 3">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="country03" editable="false" layoutY="111.0" prefHeight="259.0" prefWidth="291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="111.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></TextArea>
+                              <ImageView fx:id="flag3" fitHeight="85.0" fitWidth="137.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Ülke 4">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="country04" editable="false" layoutY="111.0" prefHeight="259.0" prefWidth="291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="111.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></TextArea>
+                              <ImageView fx:id="flag4" fitHeight="85.0" fitWidth="137.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

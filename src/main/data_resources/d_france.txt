@@ -1,0 +1,31 @@
+name: France
+ranking: 4
+champions: 2
+year: 1998, 2018
+coach: Didier Deschamps
+players:
+Alphonse Areola (GK)
+Hugo Lloris (GK)
+Steve Mandanda (GK)
+Lucas Hernandez (DF)
+Theo Hernandez (DF)
+Axel Disasi (DF)
+Ibrahima Konate (DF)
+Jules Koundé (DF)
+Benjamin Pavard (DF)
+William Saliba (DF)
+Dayot Upamecano (DF)
+Raphael Varane (DF)
+Youssouf Fofana (MF)
+Eduardo Camavinga (MF)
+Matteo Guendouzi (MF)
+Adrien Rabiot (MF)
+Aurelien Tchouameni (MF)
+Jordan Veretout (MF)
+Kingsley Coman (ST)
+Ousmane Dembele (ST)
+Antoine Griezmann (ST)
+Olivier Giroud (ST)
+Kylian Mbappe (ST)
+Marcus Thuram (ST)
+Randal Kolo Muani (ST)

@@ -1,0 +1,32 @@
+name: Costa Rica
+ranking: 31
+champions: 0
+year: 0
+coach: Luis Fernando Suárez
+players:
+Keylor Navas (GK)
+Esteban Alvarado (GK)
+Patrick Sequeira (GK)
+Francisco Calvo (DF)
+Juan Pablo Vargas (DF)
+Kendall Waston (DF)
+Oscar Duarte (DF)
+Daniel Chacon (DF)
+Keysher Fuller (DF)
+Carlos Martínez (DF)
+Bryan Oviedo (DF)
+Ronald Matarrita (DF)
+Yeltsin Tejeda (MF)
+Celso Borges (MF)
+Youstin Salas (MF)
+Roan Wilson (MF)
+Gerson Torres (MF)
+Douglas Lopez (MF)
+Jewison Bennette (MF)
+Alvaro Zamora (MF)
+Anthony Hernández (MF)
+Brandon Aguilera (MF)
+Bryan Ruiz (MF)
+Joel Campbell (ST)
+Anthony Contreras (ST)
+Johan Venegas (ST)

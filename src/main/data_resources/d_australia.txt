@@ -1,0 +1,32 @@
+name: Australia
+ranking: 38
+champions: 0
+year: 0
+coach: Graham Arnold
+players:
+Mathew Ryan (GK)
+Andrew Redmayne (GK)
+Danny Vukovic (GK)
+Aziz Behich (DF)
+Milos Degenek (DF)
+Thomas Deng (DF)
+Joel King (DF)
+Nathaniel Atkinson (DF)
+Fran Karacic (DF)
+Harry Souttar (DF)
+Kye Rowles (DF)
+Craig Goodwin (DF)
+Aaron Mooy (MF)
+Jackson Irvine (MF)
+Ajdin Hrustic (MF)
+Bailey Wright (MF)
+Cameron Devlin (MF)
+Riley McGree (MF)
+Keanu Baccus (MF)
+Awer Mabil (ST)
+Mathew Leckie (ST)
+Marco Tilio (ST)
+James Maclaren (ST)
+Jason Cummings (ST)
+Mitchell Duke (ST)
+Garang Kuol (ST)

@@ -1,0 +1,32 @@
+name: Switzerland
+ranking: 15
+champions: 0
+year: 0
+coach: Murat Yakin
+players:
+Gregor Kobel (GK)
+Philipp Kohn (GK)
+Jonas Omlin (GK)
+Yann Sommer (GK)
+Manuel Akanji (DF)
+Eray Comert (DF)
+Nico Elvedi (DF)
+Ricardo Rodriguez (DF)
+Fabian Schar (DF)
+Silvan Widmer (DF)
+Granit Xhaka (MF)
+Edimilson Fernandes (MF)
+Fabian Frei (MF)
+Remo Freuler (MF)
+Ardon Jashari (MF)
+Fabian Rieder (MF)
+Xherdan Shaqiri (MF)
+Djibril Sow (MF)
+Renato Steffen (MF)
+Denis Zakaria (MF)
+Michel Aebischer (MF)
+Breel Embolo (ST)
+Christian Fassnacht (ST)
+Noah Okafor (ST)
+Haris Seferovic (ST)
+Ruben Vargas (ST)

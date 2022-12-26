@@ -1,0 +1,32 @@
+name: Brazil
+ranking: 1
+champions: 5
+year: 1958, 1962, 1970, 1994, 2002
+coach: Tite
+players:
+Alisson (GK)
+Ederson (GK)
+Weverton (GK)
+Dani Alves (DF)
+Danilo (DF)
+Alex Sandro (DF)
+Alex Telles (DF)
+Bremer (DF)
+Eder Militao (DF)
+Marquinhos (DF)
+Thiago Silva (DF)
+Bruno Guimaraes (MF)
+Casemiro (MF)
+Everton Ribeiro (MF)
+Fabinho (MF)
+Frederico Rodrigues (MF)
+Lucas Paqueta (MF)
+Antony (ST)
+Gabriel Jesus (ST)
+Gabriel Martinelli (ST)
+Neymar Junior (ST)
+Pedro (ST)
+Raphinha (ST)
+Richarlison (ST)
+Rodrygo Silva (ST)
+Vinicius Junior (ST)

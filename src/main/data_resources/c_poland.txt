@@ -1,0 +1,32 @@
+name: Poland
+ranking: 26
+champions: 0
+year: 0
+coach: Czesław Michniewicz
+players:
+Wojciech Szczesny (GK)
+Lukasz Skorupski (GK)
+Kamil Grabara (GK)
+Jan Bednarek (DF)
+Kamil Glik (DF)
+Robert Gumny (DF)
+Artur Jedrzejczyk (DF)
+Jakub Kiwior (DF)
+Mateusz Wieteska (DF)
+Bartosz Bereszynski (DF)
+Matty Cash (DF)
+Nicola Zalewski (DF)
+Krystian Bielik (MF)
+Przemyslaw Frankowski (MF)
+Kamil Grosicki (MF)
+Grzegorz Krychowiak (MF)
+Jakub Kaminski (MF)
+Michal Skoras (MF)
+Damian Szymanski (MF)
+Sebastian Szymanski (MF)
+Piotr Zielinski (MF)
+Szymon Zurkowski (MF)
+Robert Lewandowski (ST)
+Arkadiusz Milik (ST)
+Krzysztof Piatek (ST)
+Karol Swiderski (ST)

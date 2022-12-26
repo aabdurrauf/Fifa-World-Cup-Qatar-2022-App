@@ -1,0 +1,33 @@
+name: Netherlands
+ranking: 9
+champions: 0
+year: 0
+coach: Louis van Gaal
+players:
+Justin Bijlow (GK)
+Remko Pasveer (GK)
+Andries Noppert (GK)
+Armel Bella-Kotchap (DF)
+Daley Blind (DF)
+Stefan de Vrij (DF)
+Virgil van Dijk (DF)
+Matthijs de Ligt (DF)
+Denzel Dumfries (DF)
+Nathan Ake (DF)
+Jurrien Timber (DF)
+Tyrell Malacia (DF)
+Jeremie Frimpong (DF)
+Frenkie de Jong (MF)
+Steven Berghuis (MF)
+Davy Klaassen (MF)
+Marten de Roon (MF)
+Teun Koopmeiners (MF)
+Kenneth Taylor (MF)
+Xavi Simons (MF)
+Memphis Depay (ST)
+Luuk de Jong (ST)
+Steven Bergwijn (ST)
+Vincent Janssen (ST)
+Wout Weghorst (ST)
+Cody Gakpo (ST)
+Noa Lang (ST)

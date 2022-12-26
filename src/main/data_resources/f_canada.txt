@@ -1,0 +1,32 @@
+name: Canada
+ranking: 41
+champions: 0
+year: 0
+coach: John Herdman
+players:
+Milan Borjan (GK)
+James Pantemis (GK)
+Dayne St Clair (GK)
+Kamal Miller (DF)
+Steven Vitoria (DF)
+Joel Waterman (DF)
+Derek Cornelius (DF)
+Sam Adekugbe (DF)
+Alistair Johnston (DF)
+Richie Laryea (DF)
+Atiba Hutchinson (MF)
+Stephen Eustaquio (MF)
+Jonathan Osorio (MF)
+Mark-Anthony Kaye (MF)
+Sam Piette (MF)
+Ismael Kone (MF)
+Liam Fraser (MF)
+David Wotherspoon (MF)
+Tajon Buchanan (ST)
+Alphonso Davies (ST)
+Jonathan David (ST)
+Junior Hoilett (ST)
+Cyle Larin (ST)
+Lucas Cavallini (ST)
+Liam Millar (ST)
+Ike Ugbo (ST)

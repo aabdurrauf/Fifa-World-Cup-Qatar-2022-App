@@ -1,0 +1,32 @@
+name: United States
+ranking: 16
+champions: 0
+year: 0
+coach: Gregg Berhalter
+players:
+Ethan Horvath (GK)
+Sean Johnson (GK)
+Matt Turner (GK)
+Cameron Carter-Vickers (DF)
+Sergino Dest (DF)
+Aaron Long (DF)
+Shaq Moore (DF)
+Tim Ream (DF)
+Antonee Robinson (DF)
+Joe Scally (DF)
+DeAndre Yedlin (DF)
+Walker Zimmerman (DF)
+Brenden Aaronson (MF)
+Kellyn Acosta (MF)
+Tyler Adams (MF)
+Luca de la Torre (MF)
+Weston McKennie (MF)
+Yunus Musah (MF)
+Cristian Roldan (MF)
+Jesus Ferreira (ST)
+Jordan Morris (ST)
+Christian Pulisic (ST)
+Gio Reyna (ST)
+Josh Sargent (ST)
+Tim Weah (ST)
+Haji Wright (ST)

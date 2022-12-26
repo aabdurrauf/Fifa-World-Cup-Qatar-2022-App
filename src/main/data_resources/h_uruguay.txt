@@ -1,0 +1,32 @@
+name: Uruguay
+ranking: 14
+champions: 2
+year: 1930, 1950
+coach: Diego Alonso
+players:
+Sergio Rochet (GK)
+Fernando Muslera (GK)
+Sebastián Sosa (GK)
+Diego Godín (DF)
+José María Giménez (DF)
+Ronald Araujo (DF)
+Sebastián Coates (DF)
+Martín Cáceres (DF)
+Mathiás Olivera (DF)
+Guillermo Varela (DF)
+José Luís Rodríguez (DF)
+Matías Viña (DF)
+Federico Valverde (MF)
+Rodrigo Betancour (MF)
+Matías Vecino (MF)
+Lucas Torreira (MF)
+Manuel Ugarte (MF)
+Nicolás de la Cruz (MF)
+Giorgian De Arrascaeta (MF)
+Facundo Pellistri (MF)
+Facundo Torres (MF)
+Agustín Canobbio (MF)
+Luis Suárez (ST)
+Darwin Núñez (ST)
+Edinson Cavani (ST)
+Maximiliano Gómez (ST)

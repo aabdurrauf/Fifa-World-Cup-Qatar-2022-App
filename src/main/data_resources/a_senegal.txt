@@ -1,0 +1,31 @@
+name: Senegal
+ranking: 18
+champions: 0
+year: 0
+coach: Aliou Cissé
+players:
+Edouard Mendy (GK)
+Alfred Gomis (GK)
+Seny Diang (GK)
+Kalidou Koulibaly (DF)
+Pape Abou Cisse (DF)
+Abdou Diallo (DF)
+Fode Ballo Toure (DF)
+Youssouf Sabaly (DF)
+Ismail Jakobs (DF)
+Formose Mendy (DF)
+Pape Matar Sarr (MF)
+Pape Gueye (MF)
+Nampalys Mendy (MF)
+Idrissa Gana Gueye (MF)
+Moustapha Name (MF)
+Loum Ndiaye (MF)
+Cheikhou Kouyate (MF)
+Krepin Diatta (MF)
+Pathe Ciss (MF)
+Ismaila Sarr (ST)
+Bamba Dieng (ST)
+Boulaye Dia (ST)
+Famara Diedhiou (ST)
+Ilman Ndiaye (ST)
+Nicolas Jackson (ST)

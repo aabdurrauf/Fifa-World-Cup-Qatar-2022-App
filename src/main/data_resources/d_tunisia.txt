@@ -1,0 +1,32 @@
+name: Tunisia
+ranking: 30
+champions: 0
+year: 0
+coach: Jalal Qaderi
+players:
+Aymen Dahmen (GK)
+Mouez Hassen (GK)
+Aymen Balbouli (GK)
+Bechir Ben Said (GK)
+Mohamed Dräger (DF)
+Wajdi Kechrida (DF)
+Bilel Ifa (DF)
+Montassar Talbi (DF)
+Dylan Bronn (DF)
+Yassine Meriah (DF)
+Nader Ghandri (DF)
+Ali Maâloul (DF)
+Ali Abdi (DF)
+Ellyes Skhiri (MF)
+Aissa Laidouni (MF)
+Ferjani Sassi (MF)
+Ghaylen Chaaleli (MF)
+Mohamed Ali Ben Romdhane (MF)
+Hannibal Mejbri (MF)
+Seifeddine Jaziri (ST)
+Naim Sliti (ST)
+Taha Yassine Khenissi (ST)
+Anis Ben Slimane (ST)
+Issam Jebali (ST)
+Wahbi Khazri (ST)
+Youssef Msakni (ST)

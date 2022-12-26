@@ -1,0 +1,32 @@
+name: Qatar
+ranking: 50
+champions: 0
+year: 0
+coach: Félix Sánchez
+players:
+Saad Al Sheeb (GK)
+Meshaal Barsham (GK)
+Yousuf Hassan (GK)
+Pedro Miguel (DF)
+Musaab Khidir (DF)
+Tarek Salman (DF)
+Bassam Al Rawi (DF)
+Khoukhi Boualem (DF)
+Abdelkarim Hassan (DF)
+Ismael Mohammed (DF)
+Homam Al Amin (DF)
+Jassim Jabir (MF)
+Ali Asad (MF)
+Mohammed Waad (MF)
+Salem Al Hajri (MF)
+Assim Modibo (MF)
+Mustafa Meshaal (MF)
+Karim Boudiaf (MF)
+Abdulaziz Hatim (MF)
+Naif Alhadhrami (MF)
+Hassan Al-Haydos (ST)
+Akram Afif (ST)
+Almoez Ali (ST)
+Mohammed Muntari (ST)
+Ahmed Alaa (ST)
+Khalid Muneer (ST)

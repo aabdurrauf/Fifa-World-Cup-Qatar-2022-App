@@ -1,0 +1,32 @@
+name: Spain
+ranking: 7
+champions: 1
+year: 2010
+coach: Luis Enrique
+players:
+Unai Simon (GK)
+Robert Sanchez (GK)
+David Raya (GK)
+Dani Carvajal (DF)
+Cesar Azpilicueta (DF)
+Eric Garcia (DF)
+Hugo Guillamon (DF)
+Pau Torres (DF)
+Aymeric Laporte (DF)
+Jordi Alba (DF)
+Jose Gaya (DF)
+Sergio Busquets (MF)
+Rodrigo Hernández (MF)
+Pablo Gavi (MF)
+Pedri González (MF)
+Carlos Soler (MF)
+Koke (MF)
+Marcos Llorente (MF)
+Alvaro Morata (ST)
+Ferran Torres (ST)
+Pablo Sarabia (ST)
+Dani Olmo (ST)
+Nico Williams (ST)
+Yeremy Pino (ST)
+Marco Asensio (ST)
+Ansu Fati (ST)

@@ -1,0 +1,32 @@
+name: Ecuador
+ranking: 44
+champions: 0
+year: 0
+coach: Gustavo Alfaro
+players:
+Alexander Dominguez (GK)
+Hernan Galindez (GK)
+Moises Ramirez (GK)
+Pervis Estupinan (DF)
+Angelo Preciado (DF)
+Piero Hincapie (DF)
+Xavier Arreaga (DF)
+Diego Palacios (DF)
+Jackson Porozo (DF)
+Robert Arboleda (DF)
+Felix Torres (DF)
+William Pacho (DF)
+Moises Caicedo (MF)
+Jose Cifuentes (MF)
+Alan Franco (MF)
+Jhegson Mendez (MF)
+Carlos Gruezo (MF)
+Gonzalo Plata (MF)
+Angel Mena (MF)
+Ayrton Preciado (MF)
+Romario Ibarra (MF)
+Jeremy Sarmiento (MF)
+Enner Valencia (ST)
+Michael Estrada (ST)
+Djorkaeff Reasco (ST)
+Kevin Rodriguez (ST)

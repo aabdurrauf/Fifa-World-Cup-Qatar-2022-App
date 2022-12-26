@@ -1,0 +1,32 @@
+name: Ghana
+ranking: 61
+champions: 0
+year: 0
+coach: Otto Addo
+players:
+Danlad Ibrahim (GK)
+Manaf Nurudeen (GK)
+Lawrence Ati-Zigi (GK)
+Mohammed Salisu (DF)
+Tariq Lamptey (DF)
+Daniel Amartey (DF)
+Baba Abdul Rahman (DF)
+Alexander Djiku (DF)
+Alidu Seidu (DF)
+Gideon Mensah (DF)
+Denis Odoi (DF)
+Joseph Aidoo (DF)
+Thomas Partey (MF)
+Elisha Owusu (MF)
+Salis Samed (MF)
+Daniel-Kofi Kyereh (MF)
+Mohammed Kudus (MF)
+Inaki Williams (ST)
+Kamal Sowah (ST)
+Osman Bukari (ST)
+Daniel Afriyie Barnieh (ST)
+Jordan Ayew (ST)
+Andre Ayew (ST)
+Antoine Semenyo (ST)
+Fatawu Issahaku (ST)
+Kamaldeen Sulemana (ST)

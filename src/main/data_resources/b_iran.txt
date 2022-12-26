@@ -1,0 +1,31 @@
+name: Iran
+ranking: 20
+champions: 0
+year: 0
+coach: Carlos Queiroz
+players:
+Alireza Beiranvand (GK)
+Hossein Hosseini (GK)
+Payam Niazmand (GK)
+Amir Abedzadeh (GK)
+Ramin Rezaeian (DF)
+Abolfazl Jalali (DF)
+Hossein Kananizadegan (DF)
+Shoja Khalilzadeh (DF)
+Mortza Pouraliganji (DF)
+Majid Hosseini (DF)
+Sadegh Moharrami (DF)
+Milad Mohammadi (DF)
+Ehsan Hajisafi (DF)
+Saeid Ezatolahi (MF)
+Ahmad Nourollahi (MF)
+Ali Karimi (MF)
+Rouzbeh Cheshmi (MF)
+Vahid Amiri (MF)
+Mehdi Torabi (MF)
+Alireza Jahanbakhsh (MF)
+Ali Gholizadeh (MF)
+Saman Ghoddos (MF)
+Sardar Azmoun (ST)
+Karim Ansarifard (ST)
+Mehdi Taremi (ST)

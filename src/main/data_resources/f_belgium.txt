@@ -1,0 +1,32 @@
+name: Belgium
+ranking: 2
+champions: 0
+year: 0
+coach: Roberto Martínez
+players:
+Koen Casteels (GK)
+Thibaut Courtois (GK)
+Simon Mignolet (GK)
+Toby Alderweireld (DF)
+Zeno Debast (DF)
+Wout Faes (DF)
+Arthur Theate (DF)
+Jan Vertonghen (DF)
+Timothy Castagne (DF)
+Thomas Meunier (DF)
+Yannick Carrasco (DF)
+Thorgan Hazard (MF)
+Kevin De Bruyne (MF)
+Leander Dendoncker (MF)
+Amadou Onana (MF)
+Youri Tielemans (MF)
+Hans Vanaken (MF)
+Axel Witsel (MF)
+Charles De Ketelaere (MF)
+Jeremy Doku (ST)
+Eden Hazard (ST)
+Dries Mertens (ST)
+Leandro Trossard (ST)
+Michy Batshuayi (ST)
+Lois Openda (ST)
+Romelu Lukaku (ST)

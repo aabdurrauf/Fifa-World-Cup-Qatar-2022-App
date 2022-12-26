@@ -1,0 +1,32 @@
+name: Wales
+ranking: 19
+champions: 0
+year: 0
+coach: Rob Page
+players:
+Wayne Hennessey (GK)
+Danny Ward (GK)
+Adam Davies (GK)
+Ben Davies (DF)
+Ben Cabango (DF)
+Tom Lockyer (DF)
+Joe Rodon (DF)
+Chris Mepham (DF)
+Ethan Ampadu (DF)
+Chris Gunter (DF)
+Neco Williams (DF)
+Connor Roberts (DF)
+Sorba Thomas (MF)
+Joe Allen (MF)
+Matthew Smith (MF)
+Dylan Levitt (MF)
+Harry Wilson (MF)
+Joe Morrell (MF)
+Jonny Williams (MF)
+Aaron Ramsey (MF)
+Rubin Colwill (MF)
+Gareth Bale (ST)
+Kieffer Moore (ST)
+Mark Harris (ST)
+Brennan Johnson (ST)
+Dan James (ST)

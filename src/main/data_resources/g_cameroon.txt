@@ -1,0 +1,32 @@
+name: Cameroon
+ranking: 43
+champions: 0
+year: 0
+coach: Rigobert Song
+players:
+Devis Epassy (GK)
+Simon Ngapandouetnbu (GK)
+Andre Onana (GK)
+Jean-Charles Castelletto (DF)
+Enzo Ebosse (DF)
+Collins Fai (DF)
+Olivier Mbaizo (DF)
+Nicolas Nkoulou (DF)
+Tolo Nouhou (DF)
+Christopher Wooh (DF)
+Martin Hongla (MF)
+Pierre Kunde (MF)
+Olivier Ntcham (MF)
+Gael Ondoua (MF)
+Samuel Oum Gouet (MF)
+Andre-Frank Zambo Anguissa (MF)
+Vincent Aboubakar (ST)
+Christian Bassogog (ST)
+Choupo Moting (ST)
+Souaibou Marou (ST)
+Bryan Mbeumo (ST)
+Nicolas Moumi Ngamaleu (ST)
+Jerome Ngom (ST)
+Georges-Kevin Nkoudou (ST)
+Jean-Pierre Nsame (ST)
+Karl Toko Ekambi (ST)

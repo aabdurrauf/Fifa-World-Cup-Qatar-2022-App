@@ -1,0 +1,32 @@
+name: Portugal
+ranking: 9
+champions: 0
+year: 0
+coach: Fernando Santos
+players:
+Diogo Costa (GK)
+Jose Sa (GK)
+Rui Patricio (GK)
+Diogo Dalot (DF)
+Joao Cancelo (DF)
+Danilo Pereira (DF)
+Pepe (DF)
+Ruben Dias (DF)
+Antonio Silva (DF)
+Nuno Mendes (DF)
+Raphael Guerreiro (DF)
+Joao Palhinha (MF)
+Ruben Neves (MF)
+Bernardo Silva (MF)
+Bruno Fernandes (MF)
+Joao Mario (MF)
+Matheus Nunes (MF)
+Otavio Monteiro (MF)
+Vitinha (MF)
+William Carvalho (MF)
+Andre Silva (ST)
+Cristiano Ronaldo (ST)
+Goncalo Ramos (ST)
+Joao Felix (ST)
+Rafael Leao (ST)
+Ricardo Horta (ST)

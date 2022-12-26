@@ -1,0 +1,32 @@
+name: Morocco
+ranking: 22
+champions: 0
+year: 0
+coach: Walid Regragui
+players:
+Yassine Bono (GK)
+Munir (GK)
+Ahmed Reda Tagnaouti (GK)
+Achraf Hakimi (DF)
+Noussair Mazraoui (DF)
+Romain Saiss (DF)
+Nayef Aguerd (DF)
+Achraf Dari (DF)
+Jawad El-Yamiq (DF)
+Yahia Attiat-Allal (DF)
+Badr Benoun (DF)
+Sofyan Amrabat (MF)
+Selim Amallah (MF)
+Abdelhamid Sabiri (MF)
+Azzedine Ounahi (MF)
+Bilel El Khanouss (MF)
+Yahya Jabrane (MF)
+Anass Zaroury (MF)
+Hakim Ziyech (ST)
+Youssef En-Nesyri (ST)
+Sofiane Boufal (ST)
+Zakaria Aboukhlal (ST)
+Ez Abde (ST)
+Ilias Chair (ST)
+Abderrazak Hamdallah (ST)
+Walid Cheddira (ST)

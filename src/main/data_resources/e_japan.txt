@@ -1,0 +1,32 @@
+name: Japan
+ranking: 24
+champions: 0
+year: 0
+coach: Hajime Moriyasu
+players:
+Shuichi Gonda (GK)
+Daniel Schmidt (GK)
+Eiji Kawashima (GK)
+Miki Yamane (DF)
+Hiroki Sakai (DF)
+Maya Yoshida (DF)
+Takehiro Tomiyasu (DF)
+Shogo Taniguchi (DF)
+Ko Itakura (DF)
+Hiroki Ito (DF)
+Yuto Nagatomo (DF)
+Wataru Endo (MF)
+Hidemasa Morita (MF)
+Ao Tanaka (MF)
+Gaku Shibasaki (MF)
+Kaoru Mitoma (MF)
+Daichi Kamada (MF)
+Ritsu Doan (MF)
+Junya Ito (MF)
+Takumi Minamino (MF)
+Takefusa Kubo (MF)
+Yuki Soma (MF)
+Daizen Maeda (ST)
+Takuma Asano (ST)
+Ayase Ueda (ST)
+Shuto Machino (ST)

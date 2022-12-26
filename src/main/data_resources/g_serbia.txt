@@ -1,0 +1,32 @@
+name: Serbia
+ranking: 21
+champions: 0
+year: 0
+coach: Dragan Stojković
+players:
+Marko Dmitrovic (GK)
+Predrag Rajkovic (GK)
+Vanja Milinkovic-Savic (GK)
+Stefan Mitrovic (DF)
+Nikola Milenkovic (DF)
+Strahinja Pavlovic (DF)
+Milos Veljkovic (DF)
+Filip Mladenovic (DF)
+Strahinja Erakovic (DF)
+Srdjan Babic (DF)
+Nemanja Gudelj (MF)
+Sergej Milinkovic-Savic (MF)
+Sasa Lukic (MF)
+Marko Grujic (MF)
+Filip Kostic (MF)
+Uros Racic (MF)
+Nemanja Maksimovic (MF)
+Ivan Ilic (MF)
+Andrija Zivkovic (MF)
+Darko Lazovic (MF)
+Dusan Tadic (ST)
+Aleksandar Mitrovic (ST)
+Dusan Vlahovic (ST)
+Filip Duricic (ST)
+Luka Jovic (ST)
+Nemanja Radonji (ST)

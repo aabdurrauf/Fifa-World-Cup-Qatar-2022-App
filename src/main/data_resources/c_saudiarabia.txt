@@ -1,0 +1,32 @@
+name: Saudi Arabia
+ranking: 51
+champions: 0
+year: 0
+coach: Hervé Renard
+players:
+Mohammed Al-Owais (GK)
+Nawaf Al-Aqidi (GK)
+Mohammed Al-Yami (GK)
+Hassan Tambakti (DF)
+Abdulelah Al-Amri (DF)
+Ali Al-Bulaihi (DF)
+Abdullah Madu (DF)
+Saud Abdulhamid (DF)
+Sultan Al-Ghanam (DF)
+Mohammed Al-Breik (DF)
+Yasser Al-Shahrani (DF)
+Ali Al-Hassan (DF)
+Abdulellah Al-Malki (MF)
+Riyadh Sharahili (MF)
+Abdullah Otayf (MF)
+Mohamed Kanno (MF)
+Nasser Al-Dawsari (MF)
+Salman Al-Faraj (MF)
+Sami Al-Najei (MF)
+Salem Al-Dawsari (MF)
+Hattan Bahebri (MF)
+Fahad Al-Muwallad (ST)
+Abdulrahman Al-Aboud (ST)
+Haitham Asiri (ST)
+Firas Al-Buraikan (ST)
+Saleh Al-Shehri (ST)

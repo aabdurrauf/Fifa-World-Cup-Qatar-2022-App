@@ -1,0 +1,32 @@
+name: South Korea
+ranking: 28
+champions: 0
+year: 0
+coach: Paulo Bento
+players:
+Kim Seung-gyu (GK)
+Jo Hyeon-woo (GK)
+Song Bum-keun (GK)
+Kim Min-jae (DF)
+Kim Jin-su (DF)
+Hong Chul (DF)
+Kim Moon-hwan (DF)
+Yoon Jong-gyu (DF)
+Kim Young-gwon (DF)
+Kim Tae-hwan (DF)
+Kwon Kyung-won (DF)
+Cho Yu-min (DF)
+Jung Woo-young (MF)
+Na Sang-ho (MF)
+Paik Seung-ho (MF)
+Son Jun-ho (MF)
+Song Min-kyu (MF)
+Kwon Chang-hoon (MF)
+Lee Jae-sung (MF)
+Hwang Hee-chan (MF)
+Hwang In-beom (MF)
+Jeong Woo-yeong (MF)
+Lee Kang-in (MF)
+Hwang Ui-jo (ST)
+Cho Gue-sung (ST)
+Son Heung-min (ST)

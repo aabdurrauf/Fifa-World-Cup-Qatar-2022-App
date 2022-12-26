@@ -1,0 +1,32 @@
+name: Argentina
+ranking: 3
+champions: 3
+year: 1978, 1986, 2022
+coach: Lionel Scaloni
+players:
+Emiliano Martinez (GK)
+Geronimo Rulli (GK)
+Franco Armani (GK)
+Nahuel Molina (DF)
+Gonzalo Montiel (DF)
+Cristian Romero (DF)
+German Pezzella (DF)
+Nicolas Otamendi (DF)
+Lisandro Martinez (DF)
+Juan Foyth (DF)
+Nicolas Tagliafico (DF)
+Marcos Acuna (DF)
+Leandro Paredes (MF)
+Rodrigo De Paul (MF)
+Guido Rodriguez (MF)
+Alexis Mac Allister (MF)
+Alejandro Gomez (MF)
+Enzo Fernandez (MF)
+Exequiel Palacios (MF)
+Lionel Messi (ST)
+Lautaro Martinez (ST)
+Julian Alvarez (ST)
+Angel Di Maria (ST)
+Paulo Dybala (ST)
+Angel Correa (ST)
+Thiago Almada (ST)

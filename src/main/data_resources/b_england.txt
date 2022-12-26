@@ -1,0 +1,32 @@
+name: England
+ranking: 5
+champions: 1
+year: 1966
+coach: Gareth Southgate
+players:
+Jordan Pickford (GK)
+Aaron Ramsdale (GK)
+Nick Pope (GK)
+Kieran Trippier (DF)
+John Stones (DF)
+Kyle Walker (DF)
+Luke Shaw (DF)
+Harry Maguire (DF)
+Ben White (DF)
+Trent Alexander-Arnold (DF)
+Eric Dier (DF)
+Conor Coady (DF)
+Declan Rice (MF)
+Kalvin Phillips (MF)
+Mason Mount (MF)
+Jordan Henderson (MF)
+Jude Bellingham (MF)
+Conor Gallagher (MF)
+Harry Kane (ST)
+Callum Wilson (ST)
+Raheem Sterling (ST)
+Phil Foden (ST)
+Jack Grealish (ST)
+Bukayo Saka (ST)
+Marcus Rashford (ST)
+James Maddison (ST)

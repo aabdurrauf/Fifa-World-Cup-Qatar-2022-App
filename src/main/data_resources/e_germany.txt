@@ -1,0 +1,32 @@
+name: Germany
+ranking: 11
+champions: 4
+year: 1954, 1974, 1990, 2014
+coach: Hansi Flick
+players:
+Manuel Neuer (GK)
+Marc-Andre ter Stegen (GK)
+Kevin Trapp (GK)
+Armel Bella-Kotchap (DF)
+Matthias Ginter (DF)
+Christian Gunter (DF)
+Thilo Kehrer (DF)
+Lukas Klostermann (DF)
+David Raum (DF)
+Antonio Rudiger (DF)
+Nico Schlotterbeck (DF)
+Niklas Sule (DF)
+Julian Brandt (MF)
+Niclas Fullkrug (MF)
+Leon Goretzka (MF)
+Mario Gotze (MF)
+Ilkay Gundogan (MF)
+Jonas Hofmann (MF)
+Joshua Kimmich (MF)
+Karim Adeyemi (ST)
+Serge Gnabry (ST)
+Kai Havertz (ST)
+Youssoufa Moukoko (ST)
+Thomas Muller (ST)
+Jamal Musiala (ST)
+Leroy Sane (ST)

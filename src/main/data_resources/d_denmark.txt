@@ -1,0 +1,32 @@
+name: Denmark
+ranking: 10
+champions: 0
+year: 0
+coach: Kasper Hjulmand
+players:
+Kasper Schmeichel (GK)
+Oliver Christensen (GK)
+Frederik Ronnow (GK)
+Simon Kjaer (DF)
+Joachim Andersen (DF)
+Joakim Maehale (DF)
+Andreas Christensen (DF)
+Rasmus Kristensen (DF)
+Jens Stryger Larsen (DF)
+Victor Nelsson (DF)
+Daniel Wass (DF)
+Alexander Bah (DF)
+Thomas Delaney (MF)
+Mathias Jensen (MF)
+Christian Eriksen (MF)
+Christian Norgaard (MF)
+Robert Skov (MF)
+Pierre-Emile Hojbjerg (MF)
+Andreas Skov Olsen (ST)
+Jesper Lindstom (ST)
+Andreas Cornelius (ST)
+Martin Braithwaite (ST)
+Kasper Dolberg (ST)
+Mikkel Damsgaard (ST)
+Jonas Wind (ST)
+Yussuf Poulsen (ST)
