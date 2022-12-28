@@ -131,11 +131,12 @@ public class Test {
             System.out.println("DÜNYA KÜPASI TAKİP UYGULAMASI");
             System.out.println("********* ANA MENÜ **********");
             System.out.println("*****************************");
-            System.out.println("1. Maçlar\n" +
-                               "2. Haberler\n" +
-                               "3. Gruplar\n" +
-                               "4. Ülkeler\n" +
-                               "0. Çıkış");
+            System.out.println("""
+                    1. Maçlar
+                    2. Haberler
+                    3. Gruplar
+                    4. Ülkeler
+                    0. Çıkış""");
             System.out.println("Seçim giriniz: ");
 
             try{
@@ -154,10 +155,11 @@ public class Test {
             }
             else if(menu_input == 2){
                 System.out.println("Haberler");
-                System.out.println("1. Erling Haaland yeni bir Ferrari almak için İtalya'da" + // https://www.goal.com/tr/haber/erling-haaland-yeni-bir-ferrari-almak-icin-italya-da/bltfed5226742e7d96f
-                        "\n2. 2022 Dünya Kupası gol krallığı: Kylian Mbappe veya Enner Valencia?" + //https://www.goal.com/tr/galeri-listesi/2022-dunya-kupasi-gol-kralligi-enner-valencia-altin-ayakkabi-yarisi/blt8dc446a2e3757f97
-                        "\n3. Efsane TRT Spikeri Levent Özçelik, Vincent Aboubakar'a 'Maradona' dedi" + // https://www.goal.com/tr/haber/efsane-trt-spikeri-levent-ozcelik-vincent-aboubakar-a-maradona-dedi/bltbf2686823aafd89a
-                        "\n4. Fransa, Benzema olmadan daha mı mutlu?"); // https://www.goal.com/tr/haber/fransa-benzema-olmadan-daha-mi-mutlu-tchouameni-fenerbahce-nin-eski-yildizi-lugano-nun-iddialarina-yanit-verdi/bltbe39af68ed6157c4
+                System.out.println("""
+                        1. Erling Haaland yeni bir Ferrari almak için İtalya'da
+                        2. 2022 Dünya Kupası gol krallığı: Kylian Mbappe veya Enner Valencia?
+                        3. Efsane TRT Spikeri Levent Özçelik, Vincent Aboubakar'a 'Maradona' dedi
+                        4. Fransa, Benzema olmadan daha mı mutlu?"""); // https://www.goal.com/tr/haber/fransa-benzema-olmadan-daha-mi-mutlu-tchouameni-fenerbahce-nin-eski-yildizi-lugano-nun-iddialarina-yanit-verdi/bltbe39af68ed6157c4
                 int haber_menu = scan.nextInt();
                 Scanner newsScanner = new Scanner(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\News\\news" + haber_menu + ".txt"));
                 while (newsScanner.hasNextLine()) {

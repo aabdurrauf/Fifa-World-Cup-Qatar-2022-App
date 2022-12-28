@@ -1,5 +1,6 @@
 package com.example.spormusabakatakipuygulamasi;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -14,7 +15,7 @@ import javafx.scene.text.FontWeight;
 import java.util.ArrayList;
 
 public class CoachInfoPane extends PlayerInfoPane{
-    Label coach_name, takim, kupalar;
+    Label coach_name, uyruk, takim, kupalar;
     ImageView coach_photo = new ImageView();
     VBox vbox = new VBox();
     CoachInfoPane(Coach coach, String country_name){
@@ -26,7 +27,6 @@ public class CoachInfoPane extends PlayerInfoPane{
             coach_photo.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\" +
                     "main\\resources\\players\\" + "Lionel Messi" + ".png"));
         }
-        AnchorPane leftPane = new AnchorPane();
         coach_photo.setFitHeight(400);
         coach_photo.setFitWidth(252);
         coach_photo.setLayoutX(-11);
@@ -53,8 +53,9 @@ public class CoachInfoPane extends PlayerInfoPane{
 
         Font fontGrid = Font.font("System", FontWeight.BOLD, FontPosture.ITALIC, 16);
         GridPane grid = new GridPane();
-        ArrayList<Label> labels = new ArrayList<Label>();
+        ArrayList<Label> labels = new ArrayList<>();
         labels.add(new Label("Yaş\t\t\t: "));
+        labels.add(new Label("Uyruk\t\t: "));
         labels.add(new Label("Takım\t\t: "));
         labels.add(new Label("Kupalar\t\t: "));
         int i = 0;
@@ -63,28 +64,32 @@ public class CoachInfoPane extends PlayerInfoPane{
             grid.add(label, 0, i);
             i++;
         }
-        takim = new Label(String.valueOf(coach.getTakim()));
+        uyruk = new Label(coach.getNationality());
+        takim = new Label(coach.getTakim());
         yas = new Label(String.valueOf(coach.getAge()));
+        uyruk.setFont(fontGrid);
         takim.setFont(fontGrid);
         yas.setFont(fontGrid);
 
         for (int j = 0; j < coach.getKupalar().size(); j++) {
             kupalar = new Label(coach.getKupalar().get(j));
-            grid.add(kupalar, 1, j+2);
+            grid.add(kupalar, 1, j+3);
             kupalar.setFont(fontGrid);
         }
         grid.add(yas, 1, 0);
-        grid.add(takim, 1, 1);
-        //grid.add(kupalar, 1, 2);
+        grid.add(uyruk, 1, 1);
+        grid.add(takim, 1, 2);
 
         grid.setLayoutX(13);
-        grid.setLayoutY(126);
+        grid.setLayoutY(140);
         grid.setPrefHeight(226);
         grid.setPrefWidth(307);
 
+        vbox.getChildren().addAll(flag, coach_name);
+        vbox.setPadding(new Insets(15));
+        AnchorPane leftPane = new AnchorPane();
         AnchorPane rightPane = new AnchorPane();
         leftPane.getChildren().add(coach_photo);
-        vbox.getChildren().addAll(flag, coach_name);
         rightPane.getChildren().addAll(vbox, grid);
 
         setOrientation(Orientation.HORIZONTAL);

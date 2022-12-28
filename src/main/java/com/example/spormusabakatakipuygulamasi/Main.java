@@ -2,6 +2,7 @@ package com.example.spormusabakatakipuygulamasi;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -11,9 +12,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class Main extends Application {
     private static BorderPane root = new BorderPane();
-    private static Image icon = new Image("2022_FIFA_Dünya_Kupası.png");
+    private static final Image icon = new Image("2022_FIFA_Dünya_Kupası.png");
 
     public void init() throws Exception {
         // reading the data files
@@ -33,8 +36,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent main = FXMLLoader.load(getClass().getResource("menu_toolbar.fxml"));
-        AnchorPane homeScreen = FXMLLoader.load(getClass().getResource("anasayfa.fxml"));
+        Parent main = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu_toolbar.fxml")));
+        AnchorPane homeScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("anasayfa.fxml")));
         root.setTop(main);
         root.setCenter(homeScreen);
 
@@ -60,6 +63,10 @@ public class Main extends Application {
 
     public static BorderPane getRoot() {
         return root;
+    }
+
+    public static void setCenterRoot(Node node){
+        root.setCenter(node);
     }
 
     public void exitApp(Stage stage){

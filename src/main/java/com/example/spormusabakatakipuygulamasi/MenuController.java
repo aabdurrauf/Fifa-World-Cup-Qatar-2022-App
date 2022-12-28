@@ -1,6 +1,5 @@
 package com.example.spormusabakatakipuygulamasi;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -23,13 +22,11 @@ import java.util.ArrayList;
 
 
 public class MenuController {
-    private BorderPane border;
 
     public void anasayfaMenu() {
         try {
             AnchorPane anasayfa = FXMLLoader.load(getClass().getResource("anasayfa.fxml"));
-            border = Main.getRoot();
-            border.setCenter(anasayfa);
+            Main.setCenterRoot(anasayfa);
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -39,8 +36,7 @@ public class MenuController {
     public void maclarMenu() {
         try {
             SplitPane maclar = FXMLLoader.load(getClass().getResource("maclar.fxml"));
-            border = Main.getRoot();
-            border.setCenter(maclar);
+            Main.setCenterRoot(maclar);
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -50,15 +46,14 @@ public class MenuController {
     public void haberlerMenu() {
         try {
             ScrollPane haberler = FXMLLoader.load(getClass().getResource("haberler.fxml"));
-            border = Main.getRoot();
-            border.setCenter(haberler);
+            Main.setCenterRoot(haberler);
         }
         catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void gruplarMenu() throws IOException {
+    public void gruplarMenu() {
         /*
         TableView<Country> countries = new TableView<>();
         ObservableList<Country> data = FXCollections.observableArrayList(ReadFile.groups.get(0).getCountryList()); // this works fine
@@ -77,8 +72,7 @@ public class MenuController {
         pane.getChildren().add(countries);*/
         try {
             SplitPane gruplar = FXMLLoader.load(getClass().getResource("gruplar.fxml"));
-            border = Main.getRoot();
-            border.setCenter(gruplar);
+            Main.setCenterRoot(gruplar);
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -91,7 +85,7 @@ public class MenuController {
         alert.setTitle("Uygulamadan Çık");
         alert.setHeaderText("Uygulamadan çıkış yapacaksınız");
         alert.setContentText("Çıkmak istediğinize emin misinz?");
-        border = Main.getRoot();
+        BorderPane border = Main.getRoot();
 
         if(alert.showAndWait().get() == ButtonType.OK){
             stage = (Stage) border.getScene().getWindow();
@@ -100,10 +94,7 @@ public class MenuController {
         }
     }
 
-    public void hakkimdaMenu() {
-    }
-
-    public void oyuncularMenu() throws FileNotFoundException {
+    public void kadrolarMenu(){
         ScrollPane scrollPane = new ScrollPane();
         GridPane gridPane = new GridPane();
         ArrayList<ImageView> flagList = new ArrayList<>();
@@ -146,15 +137,13 @@ public class MenuController {
         gridPane.setHgap(25);
         gridPane.setVgap(25);
 
-        border = Main.getRoot();
         gridPane.setPadding(new Insets(10));
         scrollPane.setContent(gridPane);
 
-        border.setCenter(scrollPane);
+        Main.setCenterRoot(scrollPane);
     }
 
     @FXML TextField search;
-    String[] menuList = new String[]{"Maçlar", "Haberler", "Gruplar", "Kadrolar"};
     public void searchTyped(){
         ScrollPane pane = new ScrollPane();
         GridPane gridPane = new GridPane();
@@ -219,8 +208,7 @@ public class MenuController {
         }
 
         pane.setContent(gridPane);
-        border = Main.getRoot();
-        border.setCenter(pane);
+        Main.setCenterRoot(pane);
     }
 
     public void searchReleased(){

@@ -2,7 +2,6 @@ package com.example.spormusabakatakipuygulamasi;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -21,16 +20,26 @@ public class GruplarController {
     @FXML Text group_name;
     @FXML TableView<Country> countries = new TableView<>();
     @FXML TableView<Matches> maclar_tablosu2 = new TableView<>();
-    @FXML TableColumn nameColumn = new TableColumn();
-    @FXML TableColumn pointColumn = new TableColumn();
-    @FXML TableColumn win = new TableColumn();
-    @FXML TableColumn lose = new TableColumn();
-    @FXML TableColumn draw = new TableColumn();
-    @FXML TableColumn goalscored = new TableColumn();
-    @FXML TableColumn goalconceded = new TableColumn();
-    @FXML TableColumn Ateam2 = new TableColumn();
-    @FXML TableColumn Bteam2 = new TableColumn();
-    @FXML TableColumn date_score2 = new TableColumn();
+    @FXML
+    TableColumn<Country, String> nameColumn = new TableColumn<>();
+    @FXML
+    TableColumn<Country, String> pointColumn = new TableColumn<>();
+    @FXML
+    TableColumn<Country, String> win = new TableColumn<>();
+    @FXML
+    TableColumn<Country, String> lose = new TableColumn<>();
+    @FXML
+    TableColumn<Country, String> draw = new TableColumn<>();
+    @FXML
+    TableColumn<Country, String> goalscored = new TableColumn<>();
+    @FXML
+    TableColumn<Country, String> goalconceded = new TableColumn<>();
+    @FXML
+    TableColumn<Matches, String> Ateam2 = new TableColumn<>();
+    @FXML
+    TableColumn<Matches, String> Bteam2 = new TableColumn<>();
+    @FXML
+    TableColumn<Matches, String> date_score2 = new TableColumn<>();
     @FXML TextArea country01;
     @FXML TextArea country02;
     @FXML TextArea country03;
@@ -60,28 +69,27 @@ public class GruplarController {
             scanner.next();
             StringBuilder countryName = new StringBuilder(scanner.nextLine());
             flags.get(i).setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\" +
-                    countryName.substring(1,countryName.length()).toString() + ".png"));
-
+                    countryName.substring(1,countryName.length()) + ".png"));
         }
     }
 
     public void setTable(ObservableList<Country> data){
         countries.setItems(data);
 
-        nameColumn.setCellValueFactory(new PropertyValueFactory<Country, String>("countryName"));
-        pointColumn.setCellValueFactory(new PropertyValueFactory<Country, String>("points"));
-        win.setCellValueFactory(new PropertyValueFactory<Country, String>("win"));
-        draw.setCellValueFactory(new PropertyValueFactory<Country, String>("draw"));
-        lose.setCellValueFactory(new PropertyValueFactory<Country, String>("lose"));
-        goalscored.setCellValueFactory(new PropertyValueFactory<Country, String>("goalsScored"));
-        goalconceded.setCellValueFactory(new PropertyValueFactory<Country, String>("goalsConceded"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("countryName"));
+        pointColumn.setCellValueFactory(new PropertyValueFactory<>("points"));
+        win.setCellValueFactory(new PropertyValueFactory<>("win"));
+        draw.setCellValueFactory(new PropertyValueFactory<>("draw"));
+        lose.setCellValueFactory(new PropertyValueFactory<>("lose"));
+        goalscored.setCellValueFactory(new PropertyValueFactory<>("goalsScored"));
+        goalconceded.setCellValueFactory(new PropertyValueFactory<>("goalsConceded"));
     }
 
     public void setTable2(ObservableList<Matches> data) {
         maclar_tablosu2.setItems(data);
-        Ateam2.setCellValueFactory(new PropertyValueFactory<Matches, String>("teamA"));
-        Bteam2.setCellValueFactory(new PropertyValueFactory<Matches, String>("teamB"));
-        date_score2.setCellValueFactory(new PropertyValueFactory<Matches, String>("scoreboard"));
+        Ateam2.setCellValueFactory(new PropertyValueFactory<>("teamA"));
+        Bteam2.setCellValueFactory(new PropertyValueFactory<>("teamB"));
+        date_score2.setCellValueFactory(new PropertyValueFactory<>("scoreboard"));
     }
 
     public void setGroup (String groupName, int groupNumber) throws FileNotFoundException {
@@ -103,35 +111,35 @@ public class GruplarController {
         setTextToTextArea(countryInfoList, flags, groupNumber*4);
     }
 
-    public void AGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void AGrubMenu() throws FileNotFoundException {
         setGroup("A", 0);
     }
 
-    public void BGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void BGrubMenu() throws FileNotFoundException {
         setGroup("B", 1);
     }
 
-    public void CGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void CGrubMenu() throws FileNotFoundException {
         setGroup("C", 2);
     }
 
-    public void DGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void DGrubMenu() throws FileNotFoundException {
         setGroup("D", 3);
     }
 
-    public void EGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void EGrubMenu() throws FileNotFoundException {
         setGroup("E", 4);
     }
 
-    public void FGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void FGrubMenu() throws FileNotFoundException {
         setGroup("F", 5);
     }
 
-    public void GGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void GGrubMenu() throws FileNotFoundException {
         setGroup("G", 6);
     }
 
-    public void HGrubMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void HGrubMenu() throws FileNotFoundException {
         setGroup("H", 7);
     }
 }

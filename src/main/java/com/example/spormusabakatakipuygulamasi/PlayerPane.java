@@ -64,7 +64,8 @@ public class PlayerPane extends AnchorPane {
         vbox.getChildren().addAll(player_photo, gridPane);
         getChildren().add(vbox);
     }
-    PlayerPane(){
-        super();
+
+    void useBilgiGoster(BilgiGoster bilgiGoster){
+        bilgiGoster.bilgi_goster();
     }
 }

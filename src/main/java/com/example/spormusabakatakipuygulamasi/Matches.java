@@ -29,7 +29,7 @@ public class Matches {
                 teamB.addWin();
                 teamB.addPoints(3);
                 teamA.addLose();
-            } else if (score[0] == score[1]) {
+            } else {
                 teamA.addPoints(1);
                 teamB.addPoints(1);
                 teamA.addDraw();

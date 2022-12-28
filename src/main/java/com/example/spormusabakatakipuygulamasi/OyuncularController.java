@@ -3,7 +3,6 @@ package com.example.spormusabakatakipuygulamasi;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
@@ -26,13 +25,20 @@ public class OyuncularController {
             gridPane.setHgap(15);
             gridPane.setVgap(15);
             playerPane.setCursor(Cursor.HAND);
-            playerPane.setOnMouseClicked(e -> {
+            BilgiGoster bilgiGoster =() ->{
+                PlayerInfoPane pane = new PlayerInfoPane(player, country.getCountryName());
+                Main.setCenterRoot(pane);
+            };
+            PlayerPane finalPlayerPane = playerPane;
+            playerPane.setOnMouseClicked(e -> finalPlayerPane.useBilgiGoster(bilgiGoster));
+
+            /*playerPane.setOnMouseClicked(e -> {
                 try {
                     playerInfoRequest(player, country);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
-            });
+            });*/
             if((column)%4==0){
                 row++;
                 column = 0;
@@ -42,35 +48,26 @@ public class OyuncularController {
         gridPane.add(playerPane, column, row);
         gridPane.setPadding(new Insets(15));
         playerPane.setCursor(Cursor.HAND);
-        playerPane.setOnMouseClicked(e -> {
-            try {
-                playerInfoRequest(country.getCoach(), country);
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
 
+        BilgiGoster bilgiGoster =() ->{
+            CoachInfoPane pane = new CoachInfoPane(country.getCoach(), country.getCountryName());
+            Main.setCenterRoot(pane);
+        };
+        PlayerPane finalCoachPane = playerPane;
+        playerPane.setOnMouseClicked(e -> finalCoachPane.useBilgiGoster(bilgiGoster));
         return gridPane;
     }
-
 
     public void clickPlayer(Country country) throws IOException {
         ScrollPane scrollPane = new ScrollPane();
 
         scrollPane.setContent(setGridPane(country));
-        BorderPane border = Main.getRoot();
-        border.setCenter(scrollPane);
+        Main.setCenterRoot(scrollPane);
     }
 
     public static void playerInfoRequest(Players player, Country country) throws IOException {
         PlayerInfoPane pane = new PlayerInfoPane(player, country.getCountryName());
-        BorderPane border = Main.getRoot();
-        border.setCenter(pane);
-    }
-    public static void playerInfoRequest(Coach coach, Country country) throws IOException {
-        CoachInfoPane pane = new CoachInfoPane(coach, country.getCountryName());
-        BorderPane border = Main.getRoot();
-        border.setCenter(pane);
+        Main.setCenterRoot(pane);
     }
 
 }

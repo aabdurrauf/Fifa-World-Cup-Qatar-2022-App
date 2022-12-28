@@ -10,21 +10,9 @@ public class Players extends Person {
     private int yellowCard;
     private int redCard;
 
-    Players(String name, String nationality, int age, String club, String position, int shirtNumber){
-        super(name, nationality, age);
-        this.club = club;
-        this.position = position;
-        this.shirtNumber = shirtNumber;
-        goals = 0;
-        assist = 0;
-        yellowCard = 0;
-        redCard = 0;
-    }
     Players(String name, String position){
         this.name = name;
         this.position = position;
-    }
-    Players(){
     }
     public String getPosition(){
         return position;

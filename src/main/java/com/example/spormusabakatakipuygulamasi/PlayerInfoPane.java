@@ -79,7 +79,7 @@ public class PlayerInfoPane extends SplitPane {
 
         Font fontGrid = Font.font("System", FontWeight.BOLD, FontPosture.ITALIC, 16);
         GridPane grid = new GridPane();
-        ArrayList<Label> labels = new ArrayList<Label>();
+        ArrayList<Label> labels = new ArrayList<>();
         labels.add(new Label("Yaş\t\t\t: "));
         labels.add(new Label("Boy\t\t\t: "));
         labels.add(new Label("Goller\t\t: "));

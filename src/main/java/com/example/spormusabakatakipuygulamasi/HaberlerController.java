@@ -1,6 +1,5 @@
 package com.example.spormusabakatakipuygulamasi;
 
-import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -35,7 +34,7 @@ public class HaberlerController {
         border.setCenter(borderPane);
     }
 
-    public void news1(ActionEvent actionEvent) throws FileNotFoundException {
+    public void news1() throws FileNotFoundException {
         setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\messi kupa.jpg", 250, 0, true, false));
         this.borderPane.setTop(this.imageView);
 
@@ -45,7 +44,7 @@ public class HaberlerController {
         setSceneToRoot(this.borderPane);
     }
 
-    public void news2(ActionEvent actionEvent) throws FileNotFoundException {
+    public void news2() throws FileNotFoundException {
         setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\mbappe sad.jpg", 250, 0, true, false));
         this.borderPane.setTop(this.imageView);
 
@@ -55,7 +54,7 @@ public class HaberlerController {
         setSceneToRoot(this.borderPane);
     }
 
-    public void news3(ActionEvent actionEvent) throws FileNotFoundException {
+    public void news3() throws FileNotFoundException {
         setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\fbl-wc-2022-training-fra-1-5-scaled.jpg", 250, 0, true, false));
         this.borderPane.setTop(this.imageView);
 
@@ -65,7 +64,7 @@ public class HaberlerController {
         setSceneToRoot(this.borderPane);
     }
 
-    public void news4(ActionEvent actionEvent) throws FileNotFoundException {
+    public void news4() throws FileNotFoundException {
         setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\https___bvbbuzz.com_wp-content_uploads_getty-images_2017_07_1229076055.jpeg", 250, 0, true, false));
         this.borderPane.setTop(this.imageView);
 

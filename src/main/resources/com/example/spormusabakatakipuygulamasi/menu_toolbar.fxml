@@ -20,13 +20,8 @@
                   <MenuItem mnemonicParsing="false" onAction="#maclarMenu" text="Maçlar" />
                   <MenuItem mnemonicParsing="false" onAction="#haberlerMenu" text="Haberler" />
                   <MenuItem mnemonicParsing="false" onAction="#gruplarMenu" text="Gruplar" />
-                  <MenuItem mnemonicParsing="false" onAction="#oyuncularMenu" text="Kadrolar" />
+                  <MenuItem mnemonicParsing="false" onAction="#kadrolarMenu" text="Kadrolar" />
                   <MenuItem mnemonicParsing="false" onAction="#cikisMenu" text="Çıkış" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Diğer">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#hakkimdaMenu" text="Hakkımda" />
                </items>
             </Menu>
          </menus>

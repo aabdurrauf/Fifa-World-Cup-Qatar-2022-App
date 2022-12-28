@@ -119,7 +119,7 @@ public class ReadFile {
         }
 
         String matchDate = null;
-        while (scanner.hasNextLine()) {
+        while (scanner != null && scanner.hasNextLine()) {
             StringBuilder nextLine = new StringBuilder(scanner.next());
             try {
                 Integer.parseInt(nextLine.toString());
@@ -138,7 +138,7 @@ public class ReadFile {
                     }
                 }
                 if (!flag){
-                    nextLine.append(" " + nextWord);
+                    nextLine.append(" ").append(nextWord);
                     nextWord = new StringBuilder(scanner.next());
                 }
                 for (Country country : CountryList) {
@@ -239,8 +239,7 @@ public class ReadFile {
         String countryName = scanner.nextLine();
         for (Country country : CountryList){
             if (countryName.equals(country.getCountryName())){
-                String name = scanner.nextLine();
-                //System.out.println("Coach name: " + name);
+                scanner.nextLine();
                 country.getCoach().setNationality(countryName);
                 country.getCoach().setAge(scanner.nextInt());
                 scanner.nextLine();

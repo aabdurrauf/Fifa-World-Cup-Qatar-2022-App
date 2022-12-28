@@ -1,6 +1,5 @@
 package com.example.spormusabakatakipuygulamasi;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Coach extends Person{

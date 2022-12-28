@@ -86,7 +86,7 @@
                   </VBox>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" onAction="#oyuncularMenu" prefHeight="74.0" prefWidth="38.0" GridPane.columnIndex="3">
+            <Button mnemonicParsing="false" onAction="#kadrolarMenu" prefHeight="74.0" prefWidth="38.0" GridPane.columnIndex="3">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
