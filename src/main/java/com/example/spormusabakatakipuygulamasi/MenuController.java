@@ -14,17 +14,19 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class MenuController {
+    private BorderPane border;
 
     public void anasayfaMenu(ActionEvent actionEvent) {
         try {
             AnchorPane anasayfa = FXMLLoader.load(getClass().getResource("anasayfa.fxml"));
-            BorderPane border = Main.getRoot();
+            border = Main.getRoot();
             border.setCenter(anasayfa);
         }
         catch (IOException e) {
@@ -35,7 +37,7 @@ public class MenuController {
     public void maclarMenu(ActionEvent actionEvent) {
         try {
             SplitPane maclar = FXMLLoader.load(getClass().getResource("maclar.fxml"));
-            BorderPane border = Main.getRoot();
+            border = Main.getRoot();
             border.setCenter(maclar);
         }
         catch (IOException e) {
@@ -46,7 +48,7 @@ public class MenuController {
     public void haberlerMenu(ActionEvent actionEvent) {
         try {
             ScrollPane haberler = FXMLLoader.load(getClass().getResource("haberler.fxml"));
-            BorderPane border = Main.getRoot();
+            border = Main.getRoot();
             border.setCenter(haberler);
         }
         catch (IOException e) {
@@ -73,7 +75,7 @@ public class MenuController {
         pane.getChildren().add(countries);*/
         try {
             SplitPane gruplar = FXMLLoader.load(getClass().getResource("gruplar.fxml"));
-            BorderPane border = Main.getRoot();
+            border = Main.getRoot();
             border.setCenter(gruplar);
         }
         catch (IOException e) {
@@ -82,6 +84,18 @@ public class MenuController {
     }
 
     public void cikisMenu(ActionEvent actionEvent) {
+        Stage stage;
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Uygulamadan Çık");
+        alert.setHeaderText("Uygulamadan çıkış yapacaksınız");
+        alert.setContentText("Çıkmak istediğinize emin misinz?");
+
+
+        if(alert.showAndWait().get() == ButtonType.OK){
+            stage = (Stage) border.getScene().getWindow();
+            System.out.println("You have successfully exited the application.");
+            stage.close();
+        }
     }
 
     public void hakkimdaMenu(ActionEvent actionEvent) {
@@ -130,7 +144,7 @@ public class MenuController {
         gridPane.setHgap(25);
         gridPane.setVgap(25);
 
-        BorderPane border = Main.getRoot();
+        border = Main.getRoot();
         gridPane.setPadding(new Insets(10));
         scrollPane.setContent(gridPane);
 
