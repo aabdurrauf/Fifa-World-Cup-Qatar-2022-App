@@ -89,7 +89,7 @@ public class MenuController {
         alert.setTitle("Uygulamadan Çık");
         alert.setHeaderText("Uygulamadan çıkış yapacaksınız");
         alert.setContentText("Çıkmak istediğinize emin misinz?");
-
+        border = Main.getRoot();
 
         if(alert.showAndWait().get() == ButtonType.OK){
             stage = (Stage) border.getScene().getWindow();

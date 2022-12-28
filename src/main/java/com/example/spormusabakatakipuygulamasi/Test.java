@@ -44,7 +44,7 @@ public class Test {
         coach.delete(0, 7);
         //System.out.println("\ncoach name: " + coach);
         // set coach name to country
-        country.setCoachName(coach.toString());
+        //country.setCoachName(coach.toString());
         // read country players name
         scanner.nextLine();
         while (scanner.hasNextLine()) {
@@ -200,7 +200,7 @@ public class Test {
                                 }
                                 System.out.println("");
                             }
-                            System.out.println("coach name: " + cn.getCoachName());
+                            System.out.println("coach name: " + cn.getCoach().getName());
                             cn.displayPlayers();
                             break;
                         }

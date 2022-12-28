@@ -26,9 +26,6 @@ public class Players extends Person {
     }
     Players(){
     }
-    public String getName(){
-        return name;
-    }
     public String getPosition(){
         return position;
     }
@@ -40,9 +37,6 @@ public class Players extends Person {
     }
     public String getHeight(){
         return height;
-    }
-    public int getAge(){
-        return age;
     }
     public int getGoals(){
         return goals;
@@ -59,9 +53,6 @@ public class Players extends Person {
 
     public void setShirtNumber(int number){
         this.shirtNumber = number;
-    }
-    public void setAge(int age){
-        this.age = age;
     }
     public void setHeight(String height) {
         this.height = height;

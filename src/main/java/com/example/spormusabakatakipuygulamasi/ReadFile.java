@@ -38,11 +38,13 @@ public class ReadFile {
             n++;
         }
         country.setChampionYears(championYears);
-        // read country coach name
-        StringBuilder coach = new StringBuilder(scanner.nextLine());
-        coach.delete(0, 7);
-        // set coach name to country
-        country.setCoachName(coach.toString());
+        // read country coachName name
+        StringBuilder coachName = new StringBuilder(scanner.nextLine());
+        coachName.delete(0, 7);
+        // set coachName name to country
+        Coach coach = new Coach(coachName.toString());
+        country.setCoach(coach);
+        //country.setCoachName(coachName.toString());
         // read country players name
         scanner.nextLine();
         while (scanner.hasNextLine()) {
@@ -215,4 +217,54 @@ public class ReadFile {
             }
         }
     }
+
+    public static void readCoachFile(){
+        File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\players\\coach_info");
+        File[] fileList = directory.listFiles();
+
+        Scanner scanner;
+        assert fileList != null;
+        for(File file : fileList){
+            try{
+                scanner = new Scanner(file);
+                assignCoach(scanner);
+            }
+            catch(IOException e){
+                System.out.println("IOEXception in file: " + file.getName());
+            }
+        }
+    }
+
+    public static void assignCoach(Scanner scanner) throws IOException{
+        String countryName = scanner.nextLine();
+        for (Country country : CountryList){
+            if (countryName.equals(country.getCountryName())){
+                String name = scanner.nextLine();
+                System.out.println("Coach name: " + name);
+                country.getCoach().setNationality(countryName);
+                country.getCoach().setAge(scanner.nextInt());
+                scanner.nextLine();
+                while (scanner.hasNextLine()){
+                    country.getCoach().addKupalar(scanner.nextLine());
+                }
+                for (Players player : country.getPlayers()){
+                    if (name.equals(player.getName())){
+                        player.setName(name);
+                        player.setShirtNumber(scanner.nextInt());
+                        player.setAge(scanner.nextInt());
+                        scanner.nextLine();
+                        player.setHeight(scanner.nextLine());
+                        player.setClub(scanner.nextLine());
+                        player.setGoals(scanner.nextInt());
+                        player.setAssist(scanner.nextInt());
+                        player.setYellowCard(scanner.nextInt());
+                        player.setRedCard(scanner.nextInt());
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+    }
+
 }

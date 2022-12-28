@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Country implements Comparable<Country>{
     private String countryName;
     private ArrayList<Players> players = new ArrayList<>();
-    private String coachName;
+    private Coach coach;
     private int ranking;
     private int champions;
     private int[] championYears;
@@ -25,8 +25,8 @@ public class Country implements Comparable<Country>{
         this.ranking = ranking;
         this.champions = champions;
     }
-    public void setCoachName(String coach){
-        this.coachName = coach;
+    public void setCoach(Coach coach){
+        this.coach = coach;
     }
     public void setPlayers(Players[] players){
         this.players.addAll(Arrays.asList(players));
@@ -59,8 +59,8 @@ public class Country implements Comparable<Country>{
     public String getCountryName(){
         return countryName;
     }
-    public String getCoachName(){
-        return coachName;
+    public Coach getCoach(){
+        return coach;
     }
     public ArrayList<Players> getPlayers(){
         return players;

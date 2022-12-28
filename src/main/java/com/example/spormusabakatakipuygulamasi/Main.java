@@ -26,6 +26,7 @@ public class Main extends Application {
             ReadFile.addGroupMatches(group);
         }
         ReadFile.readPlayerFile();
+        ReadFile.readCoachFile();
 
         super.init();
     }

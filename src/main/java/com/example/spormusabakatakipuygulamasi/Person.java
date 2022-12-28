@@ -10,6 +10,9 @@ public abstract class Person {
         this.nationality = nationality;
         this.age = age;
     }
+    protected Person(String name){
+        this.name = name;
+    }
     Person(){}
     public void setName(String name){
         this.name = name;
@@ -19,5 +22,15 @@ public abstract class Person {
     }
     public void setAge(int age){
         this.age = age;
+    }
+
+    public String getName(){
+        return name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public String getNationality(){
+        return nationality;
     }
 }
