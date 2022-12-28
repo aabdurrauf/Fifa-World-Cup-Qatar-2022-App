@@ -31,7 +31,7 @@
             </Menu>
          </menus>
       </MenuBar>
-      <TextField fx:id="search" onKeyTyped="#searchPressed" prefHeight="26.0" prefWidth="173.0" />
+      <TextField fx:id="search" onKeyTyped="#searchTyped" prefHeight="26.0" prefWidth="173.0" />
       <Button mnemonicParsing="false" onAction="#anasayfaMenu" prefHeight="26.0" prefWidth="17.0">
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="15.0" onDragDetected="#anasayfaMenu" pickOnBounds="true" preserveRatio="true">

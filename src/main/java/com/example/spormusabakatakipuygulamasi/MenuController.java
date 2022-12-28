@@ -11,7 +11,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -26,7 +25,7 @@ import java.util.ArrayList;
 public class MenuController {
     private BorderPane border;
 
-    public void anasayfaMenu(ActionEvent actionEvent) {
+    public void anasayfaMenu() {
         try {
             AnchorPane anasayfa = FXMLLoader.load(getClass().getResource("anasayfa.fxml"));
             border = Main.getRoot();
@@ -37,7 +36,7 @@ public class MenuController {
         }
     }
 
-    public void maclarMenu(ActionEvent actionEvent) {
+    public void maclarMenu() {
         try {
             SplitPane maclar = FXMLLoader.load(getClass().getResource("maclar.fxml"));
             border = Main.getRoot();
@@ -48,7 +47,7 @@ public class MenuController {
         }
     }
 
-    public void haberlerMenu(ActionEvent actionEvent) {
+    public void haberlerMenu() {
         try {
             ScrollPane haberler = FXMLLoader.load(getClass().getResource("haberler.fxml"));
             border = Main.getRoot();
@@ -59,7 +58,7 @@ public class MenuController {
         }
     }
 
-    public void gruplarMenu(ActionEvent actionEvent) throws IOException {
+    public void gruplarMenu() throws IOException {
         /*
         TableView<Country> countries = new TableView<>();
         ObservableList<Country> data = FXCollections.observableArrayList(ReadFile.groups.get(0).getCountryList()); // this works fine
@@ -86,7 +85,7 @@ public class MenuController {
         }
     }
 
-    public void cikisMenu(ActionEvent actionEvent) {
+    public void cikisMenu() {
         Stage stage;
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Uygulamadan Çık");
@@ -101,10 +100,10 @@ public class MenuController {
         }
     }
 
-    public void hakkimdaMenu(ActionEvent actionEvent) {
+    public void hakkimdaMenu() {
     }
 
-    public void oyuncularMenu(ActionEvent actionEvent) throws FileNotFoundException {
+    public void oyuncularMenu() throws FileNotFoundException {
         ScrollPane scrollPane = new ScrollPane();
         GridPane gridPane = new GridPane();
         ArrayList<ImageView> flagList = new ArrayList<>();
@@ -155,16 +154,16 @@ public class MenuController {
     }
 
     @FXML TextField search;
-    public void searchPressed(){
+    String[] menuList = new String[]{"Maçlar", "Haberler", "Gruplar", "Kadrolar"};
+    public void searchTyped(){
+        ScrollPane pane = new ScrollPane();
         GridPane gridPane = new GridPane();
-        AnchorPane pane = new AnchorPane();
         Label label;
         Font font = Font.font("System", FontWeight.BOLD, 16);
 
         gridPane.setVgap(10);
         gridPane.setPadding(new Insets(15));
         String searchText = search.getText();
-        //System.out.println(searchText);
         int column = 0;
         for (Country country : ReadFile.CountryList){
             StringBuilder countryName = new StringBuilder(country.getCountryName());
@@ -184,8 +183,8 @@ public class MenuController {
                             System.out.println("An error occurred");
                             ex.printStackTrace();
                         }
+                        search.deleteText(0, searchText.length());
                     });
-                    //System.out.println(country.getCountryName());
                     gridPane.add(label, 0, column);
                     column++;
                     break;
@@ -208,6 +207,7 @@ public class MenuController {
                                 System.out.println("An error occurred");
                                 ex.printStackTrace();
                             }
+                            search.deleteText(0, searchText.length());
                         });
                         //System.out.println(country.getCountryName());
                         gridPane.add(label, 0, column);
@@ -218,9 +218,12 @@ public class MenuController {
             }
         }
 
-        pane.getChildren().add(gridPane);
+        pane.setContent(gridPane);
         border = Main.getRoot();
         border.setCenter(pane);
     }
 
+    public void searchReleased(){
+        anasayfaMenu();
+    }
 }

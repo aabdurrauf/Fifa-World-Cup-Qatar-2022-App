@@ -6,6 +6,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 public class CoachInfoPane extends PlayerInfoPane{
     Label coach_name, takim, kupalar;
     ImageView coach_photo = new ImageView();
+    VBox vbox = new VBox();
     CoachInfoPane(Coach coach, String country_name){
         try{
             coach_photo.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\" +
@@ -25,7 +27,6 @@ public class CoachInfoPane extends PlayerInfoPane{
                     "main\\resources\\players\\" + "Lionel Messi" + ".png"));
         }
         AnchorPane leftPane = new AnchorPane();
-        leftPane.getChildren().add(coach_photo);
         coach_photo.setFitHeight(400);
         coach_photo.setFitWidth(252);
         coach_photo.setLayoutX(-11);
@@ -53,9 +54,9 @@ public class CoachInfoPane extends PlayerInfoPane{
         Font fontGrid = Font.font("System", FontWeight.BOLD, FontPosture.ITALIC, 16);
         GridPane grid = new GridPane();
         ArrayList<Label> labels = new ArrayList<Label>();
-        labels.add(new Label("Yaş\t\t\t\t: "));
-        labels.add(new Label("Takım\t\t\t: "));
-        labels.add(new Label("Kazandığı Kupalar\t: "));
+        labels.add(new Label("Yaş\t\t\t: "));
+        labels.add(new Label("Takım\t\t: "));
+        labels.add(new Label("Kupalar\t\t: "));
         int i = 0;
         for (Label label : labels) {
             label.setFont(fontGrid);
@@ -64,19 +65,17 @@ public class CoachInfoPane extends PlayerInfoPane{
         }
         takim = new Label(String.valueOf(coach.getTakim()));
         yas = new Label(String.valueOf(coach.getAge()));
-        StringBuilder kupaString = new StringBuilder();
-        for (String kupa : coach.getKupalar()){
-            kupaString.append(kupa + "\n");
-            kupalar = new Label(kupaString.toString());
-        }
-
         takim.setFont(fontGrid);
         yas.setFont(fontGrid);
-        kupalar.setFont(fontGrid);
 
+        for (int j = 0; j < coach.getKupalar().size(); j++) {
+            kupalar = new Label(coach.getKupalar().get(j));
+            grid.add(kupalar, 1, j+2);
+            kupalar.setFont(fontGrid);
+        }
         grid.add(yas, 1, 0);
         grid.add(takim, 1, 1);
-        grid.add(kupalar, 1, 2);
+        //grid.add(kupalar, 1, 2);
 
         grid.setLayoutX(13);
         grid.setLayoutY(126);
@@ -84,7 +83,9 @@ public class CoachInfoPane extends PlayerInfoPane{
         grid.setPrefWidth(307);
 
         AnchorPane rightPane = new AnchorPane();
-        rightPane.getChildren().addAll(flag, coach_name, coach_photo, grid);
+        leftPane.getChildren().add(coach_photo);
+        vbox.getChildren().addAll(flag, coach_name);
+        rightPane.getChildren().addAll(vbox, grid);
 
         setOrientation(Orientation.HORIZONTAL);
         setDividerPositions(0.383);

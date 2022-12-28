@@ -41,12 +41,18 @@ public class OyuncularController {
         playerPane = new PlayerPane(country.getCoach(), country.getCountryName());
         gridPane.add(playerPane, column, row);
         gridPane.setPadding(new Insets(15));
-        gridPane.setHgap(15);
-        gridPane.setVgap(15);
         playerPane.setCursor(Cursor.HAND);
+        playerPane.setOnMouseClicked(e -> {
+            try {
+                playerInfoRequest(country.getCoach(), country);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         return gridPane;
     }
+
 
     public void clickPlayer(Country country) throws IOException {
         ScrollPane scrollPane = new ScrollPane();
@@ -61,4 +67,10 @@ public class OyuncularController {
         BorderPane border = Main.getRoot();
         border.setCenter(pane);
     }
+    public static void playerInfoRequest(Coach coach, Country country) throws IOException {
+        CoachInfoPane pane = new CoachInfoPane(coach, country.getCountryName());
+        BorderPane border = Main.getRoot();
+        border.setCenter(pane);
+    }
+
 }
