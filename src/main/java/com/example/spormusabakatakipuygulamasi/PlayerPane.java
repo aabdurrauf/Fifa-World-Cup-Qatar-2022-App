@@ -40,6 +40,30 @@ public class PlayerPane extends AnchorPane {
         vbox.getChildren().addAll(player_photo, gridPane);
         getChildren().add(vbox);
     }
+    PlayerPane(Coach coach, String countryName){
+        player_name = new Label(coach.getName() + "\nManager");
+        flag = new ImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\" +
+                countryName + ".png"));
+        flag.setFitHeight(25);
+        flag.setFitWidth(35);
+        gridPane.add(flag, 0, 0);
+        gridPane.add(player_name, 1, 0);
+        gridPane.setHgap(10);
+        gridPane.setPadding(new Insets(10));
+
+        try{
+            player_photo = new ImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src" +
+                    "\\main\\resources\\players\\" + coach.getName() + ".png"));
+        }
+        catch (Exception e){
+            player_photo = new ImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src" +
+                    "\\main\\resources\\players\\" + "Lionel Messi" + ".png"));
+        }
+        player_photo.setFitHeight(250);
+        player_photo.setPreserveRatio(true);
+        vbox.getChildren().addAll(player_photo, gridPane);
+        getChildren().add(vbox);
+    }
     PlayerPane(){
         super();
     }

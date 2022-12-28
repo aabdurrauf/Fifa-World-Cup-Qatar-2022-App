@@ -240,27 +240,13 @@ public class ReadFile {
         for (Country country : CountryList){
             if (countryName.equals(country.getCountryName())){
                 String name = scanner.nextLine();
-                System.out.println("Coach name: " + name);
+                //System.out.println("Coach name: " + name);
                 country.getCoach().setNationality(countryName);
                 country.getCoach().setAge(scanner.nextInt());
                 scanner.nextLine();
+                country.getCoach().setTakim(scanner.nextLine());
                 while (scanner.hasNextLine()){
                     country.getCoach().addKupalar(scanner.nextLine());
-                }
-                for (Players player : country.getPlayers()){
-                    if (name.equals(player.getName())){
-                        player.setName(name);
-                        player.setShirtNumber(scanner.nextInt());
-                        player.setAge(scanner.nextInt());
-                        scanner.nextLine();
-                        player.setHeight(scanner.nextLine());
-                        player.setClub(scanner.nextLine());
-                        player.setGoals(scanner.nextInt());
-                        player.setAssist(scanner.nextInt());
-                        player.setYellowCard(scanner.nextInt());
-                        player.setRedCard(scanner.nextInt());
-                        break;
-                    }
                 }
                 break;
             }

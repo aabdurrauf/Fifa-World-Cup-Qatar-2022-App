@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -19,7 +20,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#maclarMenu" text="Maçlar" />
                   <MenuItem mnemonicParsing="false" onAction="#haberlerMenu" text="Haberler" />
                   <MenuItem mnemonicParsing="false" onAction="#gruplarMenu" text="Gruplar" />
-                  <MenuItem mnemonicParsing="false" onAction="#oyuncularMenu" text="Oyuncular" />
+                  <MenuItem mnemonicParsing="false" onAction="#oyuncularMenu" text="Kadrolar" />
                   <MenuItem mnemonicParsing="false" onAction="#cikisMenu" text="Çıkış" />
                </items>
             </Menu>
@@ -30,6 +31,7 @@
             </Menu>
          </menus>
       </MenuBar>
+      <TextField fx:id="search" onKeyTyped="#searchPressed" prefHeight="26.0" prefWidth="173.0" />
       <Button mnemonicParsing="false" onAction="#anasayfaMenu" prefHeight="26.0" prefWidth="17.0">
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="15.0" onDragDetected="#anasayfaMenu" pickOnBounds="true" preserveRatio="true">

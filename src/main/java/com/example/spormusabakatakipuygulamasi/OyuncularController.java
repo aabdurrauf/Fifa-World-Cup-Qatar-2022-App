@@ -10,8 +10,7 @@ import java.io.IOException;
 
 public class OyuncularController {
 
-    public void clickPlayer(Country country) throws IOException {
-        ScrollPane scrollPane = new ScrollPane();
+    public static GridPane setGridPane(Country country){
         GridPane gridPane = new GridPane();
         PlayerPane playerPane;
 
@@ -29,7 +28,7 @@ public class OyuncularController {
             playerPane.setCursor(Cursor.HAND);
             playerPane.setOnMouseClicked(e -> {
                 try {
-                    this.playerInfoRequest(player, country);
+                    playerInfoRequest(player, country);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -39,12 +38,25 @@ public class OyuncularController {
                 column = 0;
             }
         }
-        scrollPane.setContent(gridPane);
+        playerPane = new PlayerPane(country.getCoach(), country.getCountryName());
+        gridPane.add(playerPane, column, row);
+        gridPane.setPadding(new Insets(15));
+        gridPane.setHgap(15);
+        gridPane.setVgap(15);
+        playerPane.setCursor(Cursor.HAND);
+
+        return gridPane;
+    }
+
+    public void clickPlayer(Country country) throws IOException {
+        ScrollPane scrollPane = new ScrollPane();
+
+        scrollPane.setContent(setGridPane(country));
         BorderPane border = Main.getRoot();
         border.setCenter(scrollPane);
     }
 
-    public void playerInfoRequest(Players player, Country country) throws IOException {
+    public static void playerInfoRequest(Players player, Country country) throws IOException {
         PlayerInfoPane pane = new PlayerInfoPane(player, country.getCountryName());
         BorderPane border = Main.getRoot();
         border.setCenter(pane);

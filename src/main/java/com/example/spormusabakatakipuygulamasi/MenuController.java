@@ -1,6 +1,7 @@
 package com.example.spormusabakatakipuygulamasi;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
@@ -10,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -19,6 +21,7 @@ import javafx.stage.Stage;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+
 
 public class MenuController {
     private BorderPane border;
@@ -149,6 +152,75 @@ public class MenuController {
         scrollPane.setContent(gridPane);
 
         border.setCenter(scrollPane);
+    }
+
+    @FXML TextField search;
+    public void searchPressed(){
+        GridPane gridPane = new GridPane();
+        AnchorPane pane = new AnchorPane();
+        Label label;
+        Font font = Font.font("System", FontWeight.BOLD, 16);
+
+        gridPane.setVgap(10);
+        gridPane.setPadding(new Insets(15));
+        String searchText = search.getText();
+        //System.out.println(searchText);
+        int column = 0;
+        for (Country country : ReadFile.CountryList){
+            StringBuilder countryName = new StringBuilder(country.getCountryName());
+            for (int i = 1; i < countryName.length()+1; i++){
+                if (searchText.equals(countryName.substring(0, i)) || searchText.equals(countryName.substring(0, i).toLowerCase())){
+                    label = new Label(country.getCountryName());
+                    label.setFont(font);
+                    label.setCursor(Cursor.HAND);
+                    Label finalLabel = label;
+                    label.setOnMouseEntered(e -> finalLabel.setStyle("-fx-text-fill: mediumorchid"));
+                    label.setOnMouseExited(e -> finalLabel.setStyle("-fx-text-fill: BLACK"));
+                    label.setOnMouseClicked(e -> {
+                        try {
+                            OyuncularController controller = new OyuncularController();
+                            controller.clickPlayer(country);
+                        } catch (IOException ex) {
+                            System.out.println("An error occurred");
+                            ex.printStackTrace();
+                        }
+                    });
+                    //System.out.println(country.getCountryName());
+                    gridPane.add(label, 0, column);
+                    column++;
+                    break;
+                }
+            }
+            for (Players player : country.getPlayers()) {
+                StringBuilder playerName = new StringBuilder(player.getName());
+                for (int i = 1; i < playerName.length()+1; i++){
+                    if (searchText.equals(playerName.substring(0, i)) || searchText.equals(playerName.substring(0, i).toLowerCase())){
+                        label = new Label(player.getName());
+                        label.setFont(font);
+                        label.setCursor(Cursor.HAND);
+                        Label finalLabel = label;
+                        label.setOnMouseEntered(e -> finalLabel.setStyle("-fx-text-fill: mediumorchid"));
+                        label.setOnMouseExited(e -> finalLabel.setStyle("-fx-text-fill: BLACK"));
+                        label.setOnMouseClicked(e -> {
+                            try {
+                                OyuncularController.playerInfoRequest(player, country);
+                            } catch (IOException ex) {
+                                System.out.println("An error occurred");
+                                ex.printStackTrace();
+                            }
+                        });
+                        //System.out.println(country.getCountryName());
+                        gridPane.add(label, 0, column);
+                        column++;
+                        break;
+                    }
+                }
+            }
+        }
+
+        pane.getChildren().add(gridPane);
+        border = Main.getRoot();
+        border.setCenter(pane);
     }
 
 }
