@@ -15,8 +15,11 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class Main extends Application {
+    private static Node[] priorPage = new Node[3];
     private static BorderPane root = new BorderPane();
     private static final Image icon = new Image("2022_FIFA_Dünya_Kupası.png");
+
+
 
     public void init() throws Exception {
         // reading the data files
@@ -40,6 +43,9 @@ public class Main extends Application {
         AnchorPane homeScreen = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("anasayfa.fxml")));
         root.setTop(main);
         root.setCenter(homeScreen);
+        //MenuController.setBack(homeScreen);
+        setPriorPage(homeScreen);
+        setCurrentPage(homeScreen);
 
         stage.setTitle("2022 FIFA Dünya Kupası");
         stage.getIcons().add(icon);
@@ -67,6 +73,37 @@ public class Main extends Application {
 
     public static void setCenterRoot(Node node){
         root.setCenter(node);
+    }
+
+    public static void setPriorPage(Node node){
+        priorPage[0] = node;
+    }
+    public static Node getPriorPage(){
+        return priorPage[0];
+    }
+    public static void setCurrentPage(Node node){
+        priorPage[1] = node;
+    }
+    public static Node getCurrentPage(){
+        return priorPage[1];
+    }
+    public static void setNextPage(Node node){
+        priorPage[2] = node;
+    }
+    public static Node getNextPage(){
+        return priorPage[2];
+    }
+    static void setBack(Node node){
+        try{
+            //System.out.println("(Main.getPriorPage().equals(node)) = " + Objects.equals(Main.getPriorPage(), node));
+            if(!(getPriorPage().equals(node))){
+                setPriorPage(Main.getCurrentPage());
+                setCurrentPage(node);
+            }
+        }
+        catch (NullPointerException e){
+            setCurrentPage(node);
+        }
     }
 
     public void exitApp(Stage stage){

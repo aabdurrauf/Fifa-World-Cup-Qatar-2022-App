@@ -1,6 +1,8 @@
 package com.example.spormusabakatakipuygulamasi;
 
-public class Players extends Person {
+import javafx.scene.paint.Color;
+
+public class Players extends Person implements Information{
     private String club;
     private String position;
     private String height;
@@ -9,6 +11,7 @@ public class Players extends Person {
     private int assist;
     private int yellowCard;
     private int redCard;
+    private PlayerInfoPane infoPane;
 
     Players(String name, String position){
         this.name = name;
@@ -39,6 +42,10 @@ public class Players extends Person {
         return redCard;
     }
 
+    public PlayerInfoPane getInfoPane(){
+        return infoPane;
+    }
+
     public void setShirtNumber(int number){
         this.shirtNumber = number;
     }
@@ -59,5 +66,16 @@ public class Players extends Person {
     }
     public void setRedCard(int redCard){
         this.redCard = redCard;
+    }
+
+    @Override
+    public void makeInfoPane() {
+        try {
+            infoPane = new PlayerInfoPane(this, country.getCountryName());
+        }
+        catch (NullPointerException e){
+            infoPane = new PlayerInfoPane(this, "");
+            System.out.println("Kadro bilgileri bulunmuyor");
+        }
     }
 }

@@ -23,7 +23,7 @@ public class CoachInfoPane extends PlayerInfoPane{
             coach_photo.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\" +
                     "main\\resources\\players\\" + coach.getName() + ".png"));
         }
-        catch (Exception e){
+        catch (IllegalArgumentException e){
             coach_photo.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\" +
                     "main\\resources\\players\\" + "Lionel Messi" + ".png"));
         }
@@ -32,9 +32,14 @@ public class CoachInfoPane extends PlayerInfoPane{
         coach_photo.setLayoutX(-11);
         coach_photo.setPickOnBounds(true);
         coach_photo.setPreserveRatio(true);
-
-        flag.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
-                "resources\\" + country_name + ".png"));
+        try {
+            flag.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                    "resources\\" + country_name + ".png"));
+        }
+        catch (IllegalArgumentException e){
+            flag.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                    "resources\\" + "white flag" + ".png"));
+        }
         flag.setFitHeight(86);
         flag.setFitWidth(147);
         flag.setLayoutX(14);
@@ -95,5 +100,8 @@ public class CoachInfoPane extends PlayerInfoPane{
         setOrientation(Orientation.HORIZONTAL);
         setDividerPositions(0.383);
         getItems().addAll(leftPane, rightPane);
+    }
+    CoachInfoPane(){
+        super();
     }
 }

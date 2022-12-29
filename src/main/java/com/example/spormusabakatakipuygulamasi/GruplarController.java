@@ -20,26 +20,16 @@ public class GruplarController {
     @FXML Text group_name;
     @FXML TableView<Country> countries = new TableView<>();
     @FXML TableView<Matches> maclar_tablosu2 = new TableView<>();
-    @FXML
-    TableColumn<Country, String> nameColumn = new TableColumn<>();
-    @FXML
-    TableColumn<Country, String> pointColumn = new TableColumn<>();
-    @FXML
-    TableColumn<Country, String> win = new TableColumn<>();
-    @FXML
-    TableColumn<Country, String> lose = new TableColumn<>();
-    @FXML
-    TableColumn<Country, String> draw = new TableColumn<>();
-    @FXML
-    TableColumn<Country, String> goalscored = new TableColumn<>();
-    @FXML
-    TableColumn<Country, String> goalconceded = new TableColumn<>();
-    @FXML
-    TableColumn<Matches, String> Ateam2 = new TableColumn<>();
-    @FXML
-    TableColumn<Matches, String> Bteam2 = new TableColumn<>();
-    @FXML
-    TableColumn<Matches, String> date_score2 = new TableColumn<>();
+    @FXML TableColumn<Country, String> nameColumn = new TableColumn<>();
+    @FXML TableColumn<Country, String> pointColumn = new TableColumn<>();
+    @FXML TableColumn<Country, String> win = new TableColumn<>();
+    @FXML TableColumn<Country, String> lose = new TableColumn<>();
+    @FXML TableColumn<Country, String> draw = new TableColumn<>();
+    @FXML TableColumn<Country, String> goalscored = new TableColumn<>();
+    @FXML TableColumn<Country, String> goalconceded = new TableColumn<>();
+    @FXML TableColumn<Matches, String> Ateam2 = new TableColumn<>();
+    @FXML TableColumn<Matches, String> Bteam2 = new TableColumn<>();
+    @FXML TableColumn<Matches, String> date_score2 = new TableColumn<>();
     @FXML TextArea country01;
     @FXML TextArea country02;
     @FXML TextArea country03;
@@ -52,7 +42,6 @@ public class GruplarController {
     File[] fileList = directory.listFiles();
 
     public void setTextToTextArea(ArrayList<TextArea> countryInfoList, ArrayList<ImageView> flags, int a) throws FileNotFoundException {
-
         assert fileList != null;
         for(int i = 0; i < 4; i++) {
             Scanner scanner = new Scanner(fileList[i + a]);

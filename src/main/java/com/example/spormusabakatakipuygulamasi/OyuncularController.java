@@ -19,25 +19,22 @@ public class OyuncularController {
         for (Players player : country.getPlayers()){
             playerPane = new PlayerPane(player, country.getCountryName());
 
-            gridPane.add(playerPane, column, row);
-            column++;
-            gridPane.setPadding(new Insets(15));
-            gridPane.setHgap(15);
-            gridPane.setVgap(15);
             playerPane.setCursor(Cursor.HAND);
+            // using FunctionalInterface
             BilgiGoster bilgiGoster =() ->{
-                PlayerInfoPane pane = new PlayerInfoPane(player, country.getCountryName());
-                Main.setCenterRoot(pane);
+                player.makeInfoPane();
+                Main.setBack(player.getInfoPane());
+                Main.setCenterRoot(player.getInfoPane());
             };
             PlayerPane finalPlayerPane = playerPane;
-            playerPane.setOnMouseClicked(e -> finalPlayerPane.useBilgiGoster(bilgiGoster));
-
+            playerPane.setOnMouseClicked(e -> {
+                finalPlayerPane.useBilgiGoster(bilgiGoster);
+            });
+            gridPane.add(playerPane, column, row);
+            column++;
             /*playerPane.setOnMouseClicked(e -> {
-                try {
-                    playerInfoRequest(player, country);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
+                player.makeInfoPane();
+                Main.setCenterRoot(player.getInfoPane());
             });*/
             if((column)%4==0){
                 row++;
@@ -45,16 +42,21 @@ public class OyuncularController {
             }
         }
         playerPane = new PlayerPane(country.getCoach(), country.getCountryName());
-        gridPane.add(playerPane, column, row);
-        gridPane.setPadding(new Insets(15));
         playerPane.setCursor(Cursor.HAND);
-
-        BilgiGoster bilgiGoster =() ->{
-            CoachInfoPane pane = new CoachInfoPane(country.getCoach(), country.getCountryName());
-            Main.setCenterRoot(pane);
+        BilgiGoster bilgiGoster =() ->{ // using FunctionalInterface
+            //CoachInfoPane pane = new CoachInfoPane(country.getCoach(), country.getCountryName());
+            country.getCoach().makeInfoPane();
+            Main.setBack(country.getCoach().getInfoPane());
+            Main.setCenterRoot(country.getCoach().getInfoPane());
         };
         PlayerPane finalCoachPane = playerPane;
         playerPane.setOnMouseClicked(e -> finalCoachPane.useBilgiGoster(bilgiGoster));
+
+        gridPane.add(playerPane, column, row);
+        gridPane.setPadding(new Insets(15));
+        gridPane.setHgap(15);
+        gridPane.setVgap(15);
+
         return gridPane;
     }
 
@@ -62,11 +64,17 @@ public class OyuncularController {
         ScrollPane scrollPane = new ScrollPane();
 
         scrollPane.setContent(setGridPane(country));
+        Main.setBack(scrollPane);
         Main.setCenterRoot(scrollPane);
     }
 
     public static void playerInfoRequest(Players player, Country country) throws IOException {
-        PlayerInfoPane pane = new PlayerInfoPane(player, country.getCountryName());
-        Main.setCenterRoot(pane);
+        player.makeInfoPane();
+        Main.setCenterRoot(player.getInfoPane());
+    }
+    // Overloading
+    public static void playerInfoRequest(Coach coach, Country country) throws IOException {
+        coach.makeInfoPane();
+        Main.setCenterRoot(coach.getInfoPane());
     }
 }

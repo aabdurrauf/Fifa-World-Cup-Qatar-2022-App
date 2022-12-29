@@ -21,10 +21,24 @@ import java.util.ArrayList;
 
 
 public class MenuController {
+    public void backPage(){
+        try{
+            Main.setCenterRoot(Main.getPriorPage());
+
+            Main.setNextPage(Main.getCurrentPage());
+            Main.setCurrentPage(Main.getPriorPage());
+            Main.setPriorPage(Main.getNextPage());
+        }
+        catch (NullPointerException e){
+            Main.setCenterRoot(Main.getCurrentPage());
+        }
+    }
+
 
     public void anasayfaMenu() {
         try {
             AnchorPane anasayfa = FXMLLoader.load(getClass().getResource("anasayfa.fxml"));
+            Main.setBack(anasayfa);
             Main.setCenterRoot(anasayfa);
         }
         catch (IOException e) {
@@ -35,6 +49,7 @@ public class MenuController {
     public void maclarMenu() {
         try {
             SplitPane maclar = FXMLLoader.load(getClass().getResource("maclar.fxml"));
+            Main.setBack(maclar);
             Main.setCenterRoot(maclar);
         }
         catch (IOException e) {
@@ -45,6 +60,7 @@ public class MenuController {
     public void haberlerMenu() {
         try {
             ScrollPane haberler = FXMLLoader.load(getClass().getResource("haberler.fxml"));
+            Main.setBack(haberler);
             Main.setCenterRoot(haberler);
         }
         catch (IOException e) {
@@ -71,6 +87,7 @@ public class MenuController {
         pane.getChildren().add(countries);*/
         try {
             SplitPane gruplar = FXMLLoader.load(getClass().getResource("gruplar.fxml"));
+            Main.setBack(gruplar);
             Main.setCenterRoot(gruplar);
         }
         catch (IOException e) {
@@ -110,6 +127,7 @@ public class MenuController {
                 flagList.get(i).setCursor(Cursor.HAND);
                 flagList.get(i).setOnMouseClicked(e -> {
                     try {
+                        Main.setBack(scrollPane);
                         OyuncularController controller = new OyuncularController();
                         controller.clickPlayer(country);
                     } catch (IOException ex) {
@@ -137,7 +155,7 @@ public class MenuController {
 
         gridPane.setPadding(new Insets(10));
         scrollPane.setContent(gridPane);
-
+        Main.setBack(scrollPane);
         Main.setCenterRoot(scrollPane);
     }
 
@@ -188,12 +206,8 @@ public class MenuController {
                         label.setOnMouseEntered(e -> finalLabel.setStyle("-fx-text-fill: mediumorchid"));
                         label.setOnMouseExited(e -> finalLabel.setStyle("-fx-text-fill: BLACK"));
                         label.setOnMouseClicked(e -> {
-                            try {
-                                OyuncularController.playerInfoRequest(player, country);
-                            } catch (IOException ex) {
-                                System.out.println("An error occurred");
-                                ex.printStackTrace();
-                            }
+                            player.makeInfoPane();
+                            Main.setCenterRoot(player.getInfoPane());
                             search.deleteText(0, searchText.length());
                         });
                         //System.out.println(country.getCountryName());
@@ -203,12 +217,28 @@ public class MenuController {
                     }
                 }
             }
+            StringBuilder coachName = new StringBuilder(country.getCoach().getName());
+            for (int i = 1; i < coachName.length()+1; i++) {
+                if (searchText.equals(coachName.substring(0, i)) || searchText.equals(coachName.substring(0, i).toLowerCase())) {
+                    label = new Label(country.getCoach().getName());
+                    label.setFont(font);
+                    label.setCursor(Cursor.HAND);
+                    Label finalLabel = label;
+                    label.setOnMouseEntered(e -> finalLabel.setStyle("-fx-text-fill: mediumorchid"));
+                    label.setOnMouseExited(e -> finalLabel.setStyle("-fx-text-fill: BLACK"));
+                    label.setOnMouseClicked(e -> {
+                        country.getCoach().makeInfoPane();
+                        Main.setCenterRoot(country.getCoach().getInfoPane());
+                        search.deleteText(0, searchText.length());
+                    });
+                    //System.out.println(country.getCountryName());
+                    gridPane.add(label, 0, column);
+                    column++;
+                }
+            }
         }
         pane.setContent(gridPane);
+        //Main.setBack(pane);
         Main.setCenterRoot(pane);
-    }
-
-    public void searchReleased(){
-        anasayfaMenu();
     }
 }

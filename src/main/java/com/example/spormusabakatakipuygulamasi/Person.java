@@ -4,6 +4,7 @@ public abstract class Person {
     protected String name;
     protected String nationality;
     protected int age;
+    protected Country country;
 
     protected Person(String name, String nationality, int age){
         this.name = name;
@@ -23,6 +24,10 @@ public abstract class Person {
     public void setAge(int age){
         this.age = age;
     }
+    public void setCountry(Country country){
+        this.country = country;
+    }
+
 
     public String getName(){
         return name;
@@ -32,5 +37,8 @@ public abstract class Person {
     }
     public String getNationality(){
         return nationality;
+    }
+    public Country getCountry(){
+        return country;
     }
 }

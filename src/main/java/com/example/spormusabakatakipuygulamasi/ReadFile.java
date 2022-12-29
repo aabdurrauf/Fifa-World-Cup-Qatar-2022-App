@@ -15,7 +15,7 @@ public class ReadFile {
         File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\countries");
         File[] fileList = directory.listFiles();
 
-        Scanner scanner;
+        Scanner scanner = null;
         assert fileList != null;
         for(File file : fileList){
             try{
@@ -35,6 +35,7 @@ public class ReadFile {
                 assignGroup(groups.get(grup), CountryList.get(i+(4*grup)));
             }
         }
+        scanner.close();
         /*
         // adding country to group A
         for (int i = 0; i < 4; i++){
@@ -154,15 +155,11 @@ public class ReadFile {
                     }
                 }
                 String scoreboard = matchDate + "\n\t    " + scoreInt[0] + "-" + scoreInt[1];
-                //System.out.println("date = " + matchDate);
-                //System.out.println("match = " + teamA.getCountryName() + scoreInt[0] + "-" + scoreInt[1] + teamB.getCountryName());
                 Matches match = new Matches(matchType, teamA, teamB, matchDate, scoreInt, scoreboard);
                 matchList.add(match);
             }
         }
-        /*for (Matches match : matchList) {
-            System.out.println(match.toString());
-        }*/
+        scanner.close();
     }
     public static void addGroupMatches(Group group) {
         for (Matches matches : groupMatches) {
@@ -178,7 +175,7 @@ public class ReadFile {
         File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\players\\player_info");
         File[] fileList = directory.listFiles();
 
-        Scanner scanner;
+        Scanner scanner = null;
         assert fileList != null;
         for(File file : fileList){
             try{
@@ -189,6 +186,7 @@ public class ReadFile {
                 System.out.println("IOEXception in file: " + file.getName());
             }
         }
+        scanner.close();
     }
     public static void assignPlayer(Scanner scanner) throws IOException{
         String countryName = scanner.nextLine();
@@ -197,6 +195,7 @@ public class ReadFile {
                 String name = scanner.nextLine();
                 for (Players player : country.getPlayers()){
                     if (name.equals(player.getName())){
+                        player.setCountry(country);
                         player.setName(name);
                         player.setShirtNumber(scanner.nextInt());
                         player.setAge(scanner.nextInt());
@@ -219,7 +218,7 @@ public class ReadFile {
         File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\players\\coach_info");
         File[] fileList = directory.listFiles();
 
-        Scanner scanner;
+        Scanner scanner = null;
         assert fileList != null;
         for(File file : fileList){
             try{
@@ -230,11 +229,13 @@ public class ReadFile {
                 System.out.println("IOEXception in file: " + file.getName());
             }
         }
+        scanner.close();
     }
     public static void assignCoach(Scanner scanner) throws IOException{
         String countryName = scanner.nextLine();
         for (Country country : CountryList){
             if (countryName.equals(country.getCountryName())){
+                country.getCoach().setCountry(country);
                 scanner.nextLine();
                 country.getCoach().setNationality(countryName);
                 country.getCoach().setAge(scanner.nextInt());

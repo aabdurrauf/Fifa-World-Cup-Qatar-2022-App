@@ -24,7 +24,7 @@
          <image>
             <Image url="@../../../2022_FIFA_Dünya_Kupası.png" />
          </image></ImageView>
-      <GridPane hgap="30.0" layoutX="126.0" layoutY="293.0">
+      <GridPane hgap="30.0" layoutX="126.0" layoutY="292.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
@@ -45,8 +45,7 @@
                         <ImageView fitHeight="48.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../penalty.png" />
-                           </image>
-                        </ImageView>
+                           </image></ImageView>
                         <Label alignment="CENTER" prefHeight="18.0" prefWidth="65.0" text="Maçlar" textAlignment="CENTER" />
                      </children>
                   </VBox>
@@ -62,8 +61,7 @@
                         <ImageView fitHeight="48.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../newspaper.png" />
-                           </image>
-                        </ImageView>
+                           </image></ImageView>
                         <Label alignment="CENTER" prefHeight="18.0" prefWidth="65.0" text="Haberler" textAlignment="CENTER" />
                      </children>
                   </VBox>
@@ -79,8 +77,7 @@
                         <ImageView fitHeight="48.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../abc.png" />
-                           </image>
-                        </ImageView>
+                           </image></ImageView>
                         <Label alignment="CENTER" prefHeight="18.0" prefWidth="65.0" text="Gruplar" textAlignment="CENTER" />
                      </children>
                   </VBox>
@@ -93,11 +90,10 @@
                <graphic>
                   <VBox prefHeight="66.0" prefWidth="26.0">
                      <children>
-                        <ImageView fitHeight="48.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="48.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../soccer-player.png" />
-                           </image>
-                        </ImageView>
+                           </image></ImageView>
                         <Label alignment="CENTER" prefHeight="18.0" prefWidth="61.0" text="Kadrolar" textAlignment="CENTER" />
                      </children>
                   </VBox>
