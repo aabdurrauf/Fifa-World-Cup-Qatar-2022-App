@@ -48,7 +48,7 @@ public class GruplarController {
     @FXML ImageView flag2;
     @FXML ImageView flag3;
     @FXML ImageView flag4;
-    File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\data_resources");
+    File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\countries");
     File[] fileList = directory.listFiles();
 
     public void setTextToTextArea(ArrayList<TextArea> countryInfoList, ArrayList<ImageView> flags, int a) throws FileNotFoundException {

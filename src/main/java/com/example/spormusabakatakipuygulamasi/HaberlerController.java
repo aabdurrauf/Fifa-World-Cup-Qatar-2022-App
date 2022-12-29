@@ -35,40 +35,48 @@ public class HaberlerController {
     }
 
     public void news1() throws FileNotFoundException {
-        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\messi kupa.jpg", 250, 0, true, false));
+        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                "resources\\messi kupa.jpg", 300, 0, true, false));
         this.borderPane.setTop(this.imageView);
 
-        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\News\\news1.txt"));
+        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                "resources\\news\\news1.txt"));
         this.borderPane.setCenter(this.textArea);
 
         setSceneToRoot(this.borderPane);
     }
 
     public void news2() throws FileNotFoundException {
-        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\mbappe sad.jpg", 250, 0, true, false));
+        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                "resources\\mbappe sad.jpg", 300, 0, true, false));
         this.borderPane.setTop(this.imageView);
 
-        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\News\\news2.txt"));
+        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                "resources\\news\\news2.txt"));
         this.borderPane.setCenter(this.textArea);
 
         setSceneToRoot(this.borderPane);
     }
 
     public void news3() throws FileNotFoundException {
-        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\fbl-wc-2022-training-fra-1-5-scaled.jpg", 250, 0, true, false));
+        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                "resources\\fbl-wc-2022-training-fra-1-5-scaled.jpg", 300, 0, true, false));
         this.borderPane.setTop(this.imageView);
 
-        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\News\\news3.txt"));
+        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                "resources\\news\\news3.txt"));
         this.borderPane.setCenter(this.textArea);
 
         setSceneToRoot(this.borderPane);
     }
 
     public void news4() throws FileNotFoundException {
-        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\https___bvbbuzz.com_wp-content_uploads_getty-images_2017_07_1229076055.jpeg", 250, 0, true, false));
+        setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\" +
+                "https___bvbbuzz.com_wp-content_uploads_getty-images_2017_07_1229076055.jpeg", 300, 0, true, false));
         this.borderPane.setTop(this.imageView);
 
-        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\News\\news4.txt"));
+        setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
+                "resources\\news\\news4.txt"));
         this.borderPane.setCenter(this.textArea);
 
         setSceneToRoot(this.borderPane);

@@ -69,5 +69,4 @@ public class OyuncularController {
         PlayerInfoPane pane = new PlayerInfoPane(player, country.getCountryName());
         Main.setCenterRoot(pane);
     }
-
 }

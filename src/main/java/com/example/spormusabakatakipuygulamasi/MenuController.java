@@ -16,7 +16,6 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -132,7 +131,6 @@ public class MenuController {
                 }
                 i++;
             }
-
         }
         gridPane.setHgap(25);
         gridPane.setVgap(25);
@@ -206,7 +204,6 @@ public class MenuController {
                 }
             }
         }
-
         pane.setContent(gridPane);
         Main.setCenterRoot(pane);
     }

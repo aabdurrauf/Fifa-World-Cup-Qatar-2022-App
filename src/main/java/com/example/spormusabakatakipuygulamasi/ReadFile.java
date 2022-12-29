@@ -11,6 +11,40 @@ public class ReadFile {
     public static ArrayList<Country> CountryList = new ArrayList<>();
     public static ArrayList<Group> groups = new ArrayList<>();
 
+    public static void readFile(){
+        File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\countries");
+        File[] fileList = directory.listFiles();
+
+        Scanner scanner;
+        assert fileList != null;
+        for(File file : fileList){
+            try{
+                scanner = new Scanner(file);
+                assignCountry(scanner);
+            }
+            catch(IOException e){
+                System.out.println("IOEXception in file: " + file.getName());
+            }
+        }
+        // making groups A-H
+        for (int i = 65; i < 73; i++){
+            groups.add(new Group(i));
+        }
+        for (int grup = 0; grup < 8; grup++) {
+            for (int i = 0; i < 4; i++){
+                assignGroup(groups.get(grup), CountryList.get(i+(4*grup)));
+            }
+        }
+        /*
+        // adding country to group A
+        for (int i = 0; i < 4; i++){
+            assignGroup(groups.get(0), CountryList.get(i));
+        }
+        // adding country to group B
+        for (int i = 0; i < 4; i++){
+            assignGroup(groups.get(1), CountryList.get(i));
+        }*/
+    }
     public static void assignCountry(Scanner scanner) throws NumberFormatException{
         // read the country name
         StringBuilder countryName = new StringBuilder(scanner.nextLine());
@@ -60,53 +94,8 @@ public class ReadFile {
         group.addCountry(country);
     }
 
-    public static void readFile(){
-        File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\data_resources");
-        File[] fileList = directory.listFiles();
-
-        Scanner scanner;
-        assert fileList != null;
-        for(File file : fileList){
-            try{
-                scanner = new Scanner(file);
-                assignCountry(scanner);
-            }
-            catch(IOException e){
-                System.out.println("IOEXception in file: " + file.getName());
-            }
-        }
-        // making groups A-H
-        for (int i = 65; i < 73; i++){
-            groups.add(new Group(i));
-        }
-        for (int grup = 0; grup < 8; grup++) {
-            for (int i = 0; i < 4; i++){
-                assignGroup(groups.get(grup), CountryList.get(i+(4*grup)));
-            }
-        }
-        /*
-        // adding country to group A
-        for (int i = 0; i < 4; i++){
-            assignGroup(groups.get(0), CountryList.get(i));
-        }
-        // adding country to group B
-        for (int i = 0; i < 4; i++){
-            assignGroup(groups.get(1), CountryList.get(i));
-        }*/
-    }
-
     public static ArrayList<Matches> groupMatches = new ArrayList<>();
     public static ArrayList<Matches> knockOutMatches = new ArrayList<>();
-
-    public static void addGroupMatches(Group group) {
-        for (Matches matches : groupMatches) {
-            for (Country country : group.getCountryList()){
-                if (matches.getTeamA().equals(country.getCountryName())){
-                    group.addMatch(matches);
-                }
-            }
-        }
-    }
 
     public static void readMatchFile(String matchType, ArrayList<Matches> matchList, String file_name){
         File file = new File(file_name);
@@ -175,6 +164,15 @@ public class ReadFile {
             System.out.println(match.toString());
         }*/
     }
+    public static void addGroupMatches(Group group) {
+        for (Matches matches : groupMatches) {
+            for (Country country : group.getCountryList()){
+                if (matches.getTeamA().equals(country.getCountryName())){
+                    group.addMatch(matches);
+                }
+            }
+        }
+    }
 
     public static void readPlayerFile(){
         File directory = new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\players\\player_info");
@@ -192,7 +190,6 @@ public class ReadFile {
             }
         }
     }
-
     public static void assignPlayer(Scanner scanner) throws IOException{
         String countryName = scanner.nextLine();
         for (Country country : CountryList){
@@ -234,7 +231,6 @@ public class ReadFile {
             }
         }
     }
-
     public static void assignCoach(Scanner scanner) throws IOException{
         String countryName = scanner.nextLine();
         for (Country country : CountryList){
@@ -251,5 +247,4 @@ public class ReadFile {
             }
         }
     }
-
 }

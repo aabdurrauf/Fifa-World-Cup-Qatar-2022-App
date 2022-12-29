@@ -22,9 +22,9 @@ public class Main extends Application {
         // reading the data files
         ReadFile.readFile();
         ReadFile.readMatchFile("group stage", ReadFile.groupMatches,
-                "D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\matches\\group_stages_matches.txt");
+                "D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\matches\\group_stages_matches.txt");
         ReadFile.readMatchFile("knock out stage", ReadFile.knockOutMatches,
-                "D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\matches\\knock_out_matches.txt");
+                "D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\resources\\matches\\knock_out_matches.txt");
         for (Group group : ReadFile.groups){
             ReadFile.addGroupMatches(group);
         }
