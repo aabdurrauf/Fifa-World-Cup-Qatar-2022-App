@@ -7,7 +7,6 @@ players:
 Justin Bijlow (GK)
 Remko Pasveer (GK)
 Andries Noppert (GK)
-Armel Bella-Kotchap (DF)
 Daley Blind (DF)
 Stefan de Vrij (DF)
 Virgil van Dijk (DF)
