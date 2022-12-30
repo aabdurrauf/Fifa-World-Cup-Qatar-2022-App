@@ -49,6 +49,6 @@
             </Menu>
          </menus>
       </MenuBar>
-      <TextField fx:id="search" onKeyTyped="#searchTyped" prefHeight="26.0" prefWidth="173.0" />
+      <TextField fx:id="search" onKeyTyped="#searchTyped" prefHeight="26.0" prefWidth="173.0" promptText="Ara" />
    </children>
 </HBox>

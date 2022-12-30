@@ -68,12 +68,12 @@ public class OyuncularController {
         Main.setCenterRoot(scrollPane);
     }
 
-    public static void playerInfoRequest(Players player, Country country) throws IOException {
+    public static void playerInfoRequest(Players player) throws IOException {
         player.makeInfoPane();
         Main.setCenterRoot(player.getInfoPane());
     }
     // Overloading
-    public static void playerInfoRequest(Coach coach, Country country) throws IOException {
+    public static void playerInfoRequest(Coach coach) throws IOException {
         coach.makeInfoPane();
         Main.setCenterRoot(coach.getInfoPane());
     }

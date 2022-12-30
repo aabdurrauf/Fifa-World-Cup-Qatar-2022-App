@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -69,22 +70,6 @@ public class MenuController {
     }
 
     public void gruplarMenu() {
-        /*
-        TableView<Country> countries = new TableView<>();
-        ObservableList<Country> data = FXCollections.observableArrayList(ReadFile.groups.get(0).getCountryList()); // this works fine
-        countries.setItems(data);
-
-        TableColumn nameColumn = new TableColumn("Team");
-        nameColumn.setMinWidth(100);
-        nameColumn.setCellValueFactory(new PropertyValueFactory<Country, String>("countryName"));
-
-        TableColumn pointColumn = new TableColumn("Points");
-        pointColumn.setMinWidth(100);
-        pointColumn.setCellValueFactory(new PropertyValueFactory<Country, String>("points"));
-
-        countries.getColumns().addAll(nameColumn, pointColumn);
-        Pane pane = new Pane();
-        pane.getChildren().add(countries);*/
         try {
             SplitPane gruplar = FXMLLoader.load(getClass().getResource("gruplar.fxml"));
             Main.setBack(gruplar);
@@ -163,8 +148,9 @@ public class MenuController {
     public void searchTyped(){
         ScrollPane pane = new ScrollPane();
         GridPane gridPane = new GridPane();
-        Label label;
+        Label labelName, labelCategory;
         Font font = Font.font("System", FontWeight.BOLD, 16);
+        Font font2 = Font.font("System", FontWeight.LIGHT, FontPosture.ITALIC, 16);
 
         gridPane.setVgap(10);
         gridPane.setPadding(new Insets(15));
@@ -174,13 +160,27 @@ public class MenuController {
             StringBuilder countryName = new StringBuilder(country.getCountryName());
             for (int i = 1; i < countryName.length()+1; i++){
                 if (searchText.equals(countryName.substring(0, i)) || searchText.equals(countryName.substring(0, i).toLowerCase())){
-                    label = new Label(country.getCountryName());
-                    label.setFont(font);
-                    label.setCursor(Cursor.HAND);
-                    Label finalLabel = label;
-                    label.setOnMouseEntered(e -> finalLabel.setStyle("-fx-text-fill: mediumorchid"));
-                    label.setOnMouseExited(e -> finalLabel.setStyle("-fx-text-fill: BLACK"));
-                    label.setOnMouseClicked(e -> {
+
+                    HBox box = new HBox();
+                    box.setSpacing(7);
+                    labelName = new Label(country.getCountryName());
+                    labelName.setFont(font);
+                    labelName.setCursor(Cursor.HAND);
+                    labelCategory = new Label("- ülke");
+                    labelCategory.setFont(font2);
+                    labelCategory.setCursor(Cursor.HAND);
+                    box.getChildren().addAll(labelName, labelCategory);
+                    Label finalLabel = labelName;
+                    Label finalLabelCategory = labelCategory;
+                    box.setOnMouseEntered(e -> {
+                        finalLabel.setStyle("-fx-text-fill: mediumorchid");
+                        finalLabelCategory.setStyle("-fx-text-fill: mediumorchid");
+                    });
+                    box.setOnMouseExited(e -> {
+                        finalLabel.setStyle("-fx-text-fill: BLACK");
+                        finalLabelCategory.setStyle("-fx-text-fill: BLACK");
+                    });
+                    box.setOnMouseClicked(e -> {
                         try {
                             OyuncularController controller = new OyuncularController();
                             controller.clickPlayer(country);
@@ -190,7 +190,7 @@ public class MenuController {
                         }
                         search.deleteText(0, searchText.length());
                     });
-                    gridPane.add(label, 0, column);
+                    gridPane.add(box, 0, column);
                     column++;
                     break;
                 }
@@ -199,19 +199,32 @@ public class MenuController {
                 StringBuilder playerName = new StringBuilder(player.getName());
                 for (int i = 1; i < playerName.length()+1; i++){
                     if (searchText.equals(playerName.substring(0, i)) || searchText.equals(playerName.substring(0, i).toLowerCase())){
-                        label = new Label(player.getName());
-                        label.setFont(font);
-                        label.setCursor(Cursor.HAND);
-                        Label finalLabel = label;
-                        label.setOnMouseEntered(e -> finalLabel.setStyle("-fx-text-fill: mediumorchid"));
-                        label.setOnMouseExited(e -> finalLabel.setStyle("-fx-text-fill: BLACK"));
-                        label.setOnMouseClicked(e -> {
+                        HBox box = new HBox();
+                        box.setSpacing(7);
+                        labelName = new Label(player.getName());
+                        labelCategory = new Label("- oyuncu");
+                        labelName.setFont(font);
+                        labelName.setCursor(Cursor.HAND);
+                        labelCategory.setFont(font2);
+                        labelCategory.setCursor(Cursor.HAND);
+                        box.getChildren().addAll(labelName, labelCategory);
+                        Label finalLabel = labelName;
+                        Label finalLabelCategory = labelCategory;
+                        box.setOnMouseEntered(e -> {
+                            finalLabel.setStyle("-fx-text-fill: mediumorchid");
+                            finalLabelCategory.setStyle("-fx-text-fill: mediumorchid");
+                        });
+                        box.setOnMouseExited(e -> {
+                            finalLabel.setStyle("-fx-text-fill: BLACK");
+                            finalLabelCategory.setStyle("-fx-text-fill: BLACK");
+                        });
+                        box.setOnMouseClicked(e -> {
                             player.makeInfoPane();
                             Main.setCenterRoot(player.getInfoPane());
                             search.deleteText(0, searchText.length());
                         });
                         //System.out.println(country.getCountryName());
-                        gridPane.add(label, 0, column);
+                        gridPane.add(box, 0, column);
                         column++;
                         break;
                     }
@@ -220,19 +233,32 @@ public class MenuController {
             StringBuilder coachName = new StringBuilder(country.getCoach().getName());
             for (int i = 1; i < coachName.length()+1; i++) {
                 if (searchText.equals(coachName.substring(0, i)) || searchText.equals(coachName.substring(0, i).toLowerCase())) {
-                    label = new Label(country.getCoach().getName());
-                    label.setFont(font);
-                    label.setCursor(Cursor.HAND);
-                    Label finalLabel = label;
-                    label.setOnMouseEntered(e -> finalLabel.setStyle("-fx-text-fill: mediumorchid"));
-                    label.setOnMouseExited(e -> finalLabel.setStyle("-fx-text-fill: BLACK"));
-                    label.setOnMouseClicked(e -> {
+                    HBox box = new HBox();
+                    box.setSpacing(7);
+                    labelName = new Label(country.getCoach().getName());
+                    labelCategory = new Label("- antrenör");
+                    labelName.setFont(font);
+                    labelName.setCursor(Cursor.HAND);
+                    labelCategory.setFont(font2);
+                    labelCategory.setCursor(Cursor.HAND);
+                    box.getChildren().addAll(labelName, labelCategory);
+                    Label finalLabel = labelName;
+                    Label finalLabelCategory = labelCategory;
+                    box.setOnMouseEntered(e -> {
+                        finalLabel.setStyle("-fx-text-fill: mediumorchid");
+                        finalLabelCategory.setStyle("-fx-text-fill: mediumorchid");
+                    });
+                    box.setOnMouseExited(e -> {
+                        finalLabel.setStyle("-fx-text-fill: BLACK");
+                        finalLabelCategory.setStyle("-fx-text-fill: BLACK");
+                    });
+                    box.setOnMouseClicked(e -> {
                         country.getCoach().makeInfoPane();
                         Main.setCenterRoot(country.getCoach().getInfoPane());
                         search.deleteText(0, searchText.length());
                     });
                     //System.out.println(country.getCountryName());
-                    gridPane.add(label, 0, column);
+                    gridPane.add(box, 0, column);
                     column++;
                 }
             }
