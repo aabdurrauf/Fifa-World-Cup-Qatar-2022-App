@@ -17,7 +17,7 @@ import java.util.Objects;
 public class Main extends Application {
     private static Node[] priorPage = new Node[3];
     private static BorderPane root = new BorderPane();
-    private static final Image icon = new Image("2022_FIFA_Dünya_Kupası.png");
+    private static final Image icon = new Image("2022_WC.png");
 
     public void init() throws Exception {
         // reading the data files
