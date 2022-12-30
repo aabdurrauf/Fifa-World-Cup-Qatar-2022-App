@@ -1,6 +1,5 @@
 package com.example.spormusabakatakipuygulamasi;
 
-import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
@@ -22,7 +21,7 @@ public class PlayerInfoPane extends SplitPane {
     Label sari, kirmizi;
     Label kulup, player_position = new Label();
 
-    PlayerInfoPane(Players player, String country_name) {
+    PlayerInfoPane(Players player, Country country) {
         try{
             player_photo.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\" +
                     "main\\resources\\players\\" + player.getName() + ".png"));
@@ -41,9 +40,9 @@ public class PlayerInfoPane extends SplitPane {
 
         try {
             flag.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
-                    "resources\\" + country_name + ".png"));
+                    "resources\\" + country.getCountryName() + ".png"));
         }
-        catch (IllegalArgumentException e){
+        catch (NullPointerException e){
             flag.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
                     "resources\\" + "white flag" + ".png"));
         }
@@ -136,11 +135,5 @@ public class PlayerInfoPane extends SplitPane {
         setDividerPositions(0.383);
         getItems().addAll(leftPane, rightPane);
     }
-    PlayerInfoPane(){
-        /*Font font = Font.font("System", FontWeight.BOLD, FontPosture.ITALIC, 20);
-        Label label = new Label("Kadro bilgileri bulunmuyor");
-        label.setPadding(new Insets(20));
-        label.setFont(font);
-        getItems().add(label);*/
-    }
+    PlayerInfoPane(){}
 }

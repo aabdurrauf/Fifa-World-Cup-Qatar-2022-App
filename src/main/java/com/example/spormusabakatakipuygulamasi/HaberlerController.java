@@ -28,12 +28,6 @@ public class HaberlerController {
         this.imageView.setImage(image);
     }
 
-    public void setSceneToRoot(BorderPane borderPane){
-
-        BorderPane border = Main.getRoot();
-        border.setCenter(borderPane);
-    }
-
     public void news1() throws FileNotFoundException {
         setImageView(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
                 "resources\\messi kupa.jpg", 300, 0, true, false));
@@ -42,8 +36,8 @@ public class HaberlerController {
         setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
                 "resources\\news\\news1.txt"));
         this.borderPane.setCenter(this.textArea);
-
-        setSceneToRoot(this.borderPane);
+        Main.setBack(this.borderPane);
+        Main.setCenterRoot(this.borderPane);
     }
 
     public void news2() throws FileNotFoundException {
@@ -54,8 +48,8 @@ public class HaberlerController {
         setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
                 "resources\\news\\news2.txt"));
         this.borderPane.setCenter(this.textArea);
-
-        setSceneToRoot(this.borderPane);
+        Main.setBack(this.borderPane);
+        Main.setCenterRoot(this.borderPane);
     }
 
     public void news3() throws FileNotFoundException {
@@ -66,8 +60,8 @@ public class HaberlerController {
         setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
                 "resources\\news\\news3.txt"));
         this.borderPane.setCenter(this.textArea);
-
-        setSceneToRoot(this.borderPane);
+        Main.setBack(this.borderPane);
+        Main.setCenterRoot(this.borderPane);
     }
 
     public void news4() throws FileNotFoundException {
@@ -78,7 +72,7 @@ public class HaberlerController {
         setTextToTextArea(new File("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
                 "resources\\news\\news4.txt"));
         this.borderPane.setCenter(this.textArea);
-
-        setSceneToRoot(this.borderPane);
+        Main.setBack(this.borderPane);
+        Main.setCenterRoot(this.borderPane);
     }
 }

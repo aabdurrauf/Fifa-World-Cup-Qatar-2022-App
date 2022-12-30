@@ -1,7 +1,5 @@
 package com.example.spormusabakatakipuygulamasi;
 
-import javafx.scene.paint.Color;
-
 public class Players extends Person implements Information{
     private String club;
     private String position;
@@ -71,10 +69,11 @@ public class Players extends Person implements Information{
     @Override
     public void makeInfoPane() {
         try {
-            infoPane = new PlayerInfoPane(this, country.getCountryName());
+            //infoPane = new PlayerInfoPane(this, country.getCountryName());
+            infoPane = new PlayerInfoPane(this, country);
         }
         catch (NullPointerException e){
-            infoPane = new PlayerInfoPane(this, "");
+            infoPane = new PlayerInfoPane(this, country);
             System.out.println("Kadro bilgileri bulunmuyor");
         }
     }

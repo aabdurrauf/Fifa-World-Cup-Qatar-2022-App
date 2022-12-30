@@ -60,21 +60,11 @@ public class OyuncularController {
         return gridPane;
     }
 
-    public void clickPlayer(Country country) throws IOException {
+    public static void clickPlayer(Country country) throws IOException {
         ScrollPane scrollPane = new ScrollPane();
 
         scrollPane.setContent(setGridPane(country));
         Main.setBack(scrollPane);
         Main.setCenterRoot(scrollPane);
-    }
-
-    public static void playerInfoRequest(Players player) throws IOException {
-        player.makeInfoPane();
-        Main.setCenterRoot(player.getInfoPane());
-    }
-    // Overloading
-    public static void playerInfoRequest(Coach coach) throws IOException {
-        coach.makeInfoPane();
-        Main.setCenterRoot(coach.getInfoPane());
     }
 }

@@ -113,8 +113,7 @@ public class MenuController {
                 flagList.get(i).setOnMouseClicked(e -> {
                     try {
                         Main.setBack(scrollPane);
-                        OyuncularController controller = new OyuncularController();
-                        controller.clickPlayer(country);
+                        OyuncularController.clickPlayer(country);
                     } catch (IOException ex) {
                         System.out.println("An error occurred");
                         ex.printStackTrace();

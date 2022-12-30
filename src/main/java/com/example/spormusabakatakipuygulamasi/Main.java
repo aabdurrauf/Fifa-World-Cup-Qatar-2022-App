@@ -19,8 +19,6 @@ public class Main extends Application {
     private static BorderPane root = new BorderPane();
     private static final Image icon = new Image("2022_FIFA_Dünya_Kupası.png");
 
-
-
     public void init() throws Exception {
         // reading the data files
         ReadFile.readFile();
@@ -63,10 +61,6 @@ public class Main extends Application {
         System.out.println("Application closed");
         super.stop();
     }
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     public static BorderPane getRoot() {
         return root;
     }
@@ -78,6 +72,7 @@ public class Main extends Application {
     public static void setPriorPage(Node node){
         priorPage[0] = node;
     }
+
     public static Node getPriorPage(){
         return priorPage[0];
     }
@@ -93,6 +88,7 @@ public class Main extends Application {
     public static Node getNextPage(){
         return priorPage[2];
     }
+
     static void setBack(Node node){
         try{
             //System.out.println("(Main.getPriorPage().equals(node)) = " + Objects.equals(Main.getPriorPage(), node));
@@ -105,7 +101,6 @@ public class Main extends Application {
             setCurrentPage(node);
         }
     }
-
     public void exitApp(Stage stage){
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -117,5 +112,9 @@ public class Main extends Application {
             System.out.println("You have successfully exited the application.");
             stage.close();
         }
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }

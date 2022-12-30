@@ -18,7 +18,7 @@ public class CoachInfoPane extends PlayerInfoPane{
     Label coach_name, uyruk, takim, kupalar;
     ImageView coach_photo = new ImageView();
     VBox vbox = new VBox();
-    CoachInfoPane(Coach coach, String country_name){
+    CoachInfoPane(Coach coach, Country country){
         try{
             coach_photo.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\" +
                     "main\\resources\\players\\" + coach.getName() + ".png"));
@@ -34,9 +34,9 @@ public class CoachInfoPane extends PlayerInfoPane{
         coach_photo.setPreserveRatio(true);
         try {
             flag.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
-                    "resources\\" + country_name + ".png"));
+                    "resources\\" + country.getCountryName() + ".png"));
         }
-        catch (IllegalArgumentException e){
+        catch (NullPointerException e){
             flag.setImage(new Image("D:\\Programming\\Java\\SporMusabakaTakipUygulamasi\\src\\main\\" +
                     "resources\\" + "white flag" + ".png"));
         }

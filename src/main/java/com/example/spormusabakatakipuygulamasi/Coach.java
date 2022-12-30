@@ -26,14 +26,13 @@ public class Coach extends Person implements Information{
         return this.kupalar;
     }
 
-
     @Override
     public void makeInfoPane() {
         try {
-            infoPane = new CoachInfoPane(this, country.getCountryName());
+            infoPane = new CoachInfoPane(this, country);
         }
         catch (NullPointerException e){
-            infoPane = new CoachInfoPane(this, "");
+            infoPane = new CoachInfoPane(this, country);
             System.out.println("Kadro bilgileri bulunmuyor");
         }
     }

@@ -113,10 +113,3 @@ public class Country implements Comparable<Country>{
         }
     }
 }
-
-//player list
-//https://www.eurosport.com/football/world-cup/2022/world-cup-2022-every-world-cup-squad-
-// in-full-see-who-brazil-england-france-argentina-germany-and-spa_sto9217767/story.shtml
-
-// fifa country ranking
-// https://www.fifa.com/fifa-world-ranking/men?dateId=id13792

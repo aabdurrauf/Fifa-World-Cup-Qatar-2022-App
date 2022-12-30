@@ -28,7 +28,6 @@ public abstract class Person {
         this.country = country;
     }
 
-
     public String getName(){
         return name;
     }

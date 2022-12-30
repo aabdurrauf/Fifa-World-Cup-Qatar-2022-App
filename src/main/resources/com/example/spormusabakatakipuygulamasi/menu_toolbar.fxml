@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
@@ -49,6 +50,9 @@
             </Menu>
          </menus>
       </MenuBar>
-      <TextField fx:id="search" onKeyTyped="#searchTyped" prefHeight="26.0" prefWidth="173.0" promptText="Ara" />
+      <TextField fx:id="search" onKeyTyped="#searchTyped" prefHeight="26.0" prefWidth="173.0" promptText="Ara">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin></TextField>
    </children>
 </HBox>

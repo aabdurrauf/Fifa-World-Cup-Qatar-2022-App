@@ -36,15 +36,6 @@ public class ReadFile {
             }
         }
         scanner.close();
-        /*
-        // adding country to group A
-        for (int i = 0; i < 4; i++){
-            assignGroup(groups.get(0), CountryList.get(i));
-        }
-        // adding country to group B
-        for (int i = 0; i < 4; i++){
-            assignGroup(groups.get(1), CountryList.get(i));
-        }*/
     }
     public static void assignCountry(Scanner scanner) throws NumberFormatException{
         // read the country name
@@ -78,6 +69,7 @@ public class ReadFile {
         coachName.delete(0, 7);
         // set coachName name to country
         Coach coach = new Coach(coachName.toString());
+        coach.setCountry(country);
         country.setCoach(coach);
         //country.setCoachName(coachName.toString());
         // read country players name
@@ -85,8 +77,10 @@ public class ReadFile {
         while (scanner.hasNextLine()) {
             StringBuilder player = new StringBuilder(scanner.nextLine());
             //player.delete(player.indexOf("(")-1,player.indexOf(")")+1);
-            country.addPlayer(new Players(player.substring(0, player.indexOf("(")-1),
-                    player.substring(player.indexOf("("))));
+            Players playerObj = new Players(player.substring(0, player.indexOf("(")-1),
+                    player.substring(player.indexOf("(")));
+            playerObj.setCountry(country);
+            country.addPlayer(playerObj);
         }
         CountryList.add(country);
         scanner.close();
