@@ -147,10 +147,8 @@ public class MenuController {
     public void searchTyped(){
         ScrollPane pane = new ScrollPane();
         GridPane gridPane = new GridPane();
-        Label labelName, labelCategory;
-        Font font = Font.font("System", FontWeight.BOLD, 16);
-        Font font2 = Font.font("System", FontWeight.LIGHT, FontPosture.ITALIC, 16);
 
+        setHBox("", "");
         gridPane.setVgap(10);
         gridPane.setPadding(new Insets(15));
         String searchText = search.getText();
@@ -160,29 +158,10 @@ public class MenuController {
             for (int i = 1; i < countryName.length()+1; i++){
                 if (searchText.equals(countryName.substring(0, i)) || searchText.equals(countryName.substring(0, i).toLowerCase())){
 
-                    HBox box = new HBox();
-                    box.setSpacing(7);
-                    labelName = new Label(country.getCountryName());
-                    labelName.setFont(font);
-                    labelName.setCursor(Cursor.HAND);
-                    labelCategory = new Label("- ülke");
-                    labelCategory.setFont(font2);
-                    labelCategory.setCursor(Cursor.HAND);
-                    box.getChildren().addAll(labelName, labelCategory);
-                    Label finalLabel = labelName;
-                    Label finalLabelCategory = labelCategory;
-                    box.setOnMouseEntered(e -> {
-                        finalLabel.setStyle("-fx-text-fill: mediumorchid");
-                        finalLabelCategory.setStyle("-fx-text-fill: mediumorchid");
-                    });
-                    box.setOnMouseExited(e -> {
-                        finalLabel.setStyle("-fx-text-fill: BLACK");
-                        finalLabelCategory.setStyle("-fx-text-fill: BLACK");
-                    });
+                    HBox box = setHBox(country.getCountryName(), "- ülke");
                     box.setOnMouseClicked(e -> {
                         try {
-                            OyuncularController controller = new OyuncularController();
-                            controller.clickPlayer(country);
+                            OyuncularController.clickPlayer(country);
                         } catch (IOException ex) {
                             System.out.println("An error occurred");
                             ex.printStackTrace();
@@ -198,25 +177,7 @@ public class MenuController {
                 StringBuilder playerName = new StringBuilder(player.getName());
                 for (int i = 1; i < playerName.length()+1; i++){
                     if (searchText.equals(playerName.substring(0, i)) || searchText.equals(playerName.substring(0, i).toLowerCase())){
-                        HBox box = new HBox();
-                        box.setSpacing(7);
-                        labelName = new Label(player.getName());
-                        labelCategory = new Label("- oyuncu");
-                        labelName.setFont(font);
-                        labelName.setCursor(Cursor.HAND);
-                        labelCategory.setFont(font2);
-                        labelCategory.setCursor(Cursor.HAND);
-                        box.getChildren().addAll(labelName, labelCategory);
-                        Label finalLabel = labelName;
-                        Label finalLabelCategory = labelCategory;
-                        box.setOnMouseEntered(e -> {
-                            finalLabel.setStyle("-fx-text-fill: mediumorchid");
-                            finalLabelCategory.setStyle("-fx-text-fill: mediumorchid");
-                        });
-                        box.setOnMouseExited(e -> {
-                            finalLabel.setStyle("-fx-text-fill: BLACK");
-                            finalLabelCategory.setStyle("-fx-text-fill: BLACK");
-                        });
+                        HBox box = setHBox(player.getName(), "- oyuncu");
                         box.setOnMouseClicked(e -> {
                             player.makeInfoPane();
                             Main.setCenterRoot(player.getInfoPane());
@@ -232,38 +193,44 @@ public class MenuController {
             StringBuilder coachName = new StringBuilder(country.getCoach().getName());
             for (int i = 1; i < coachName.length()+1; i++) {
                 if (searchText.equals(coachName.substring(0, i)) || searchText.equals(coachName.substring(0, i).toLowerCase())) {
-                    HBox box = new HBox();
-                    box.setSpacing(7);
-                    labelName = new Label(country.getCoach().getName());
-                    labelCategory = new Label("- antrenör");
-                    labelName.setFont(font);
-                    labelName.setCursor(Cursor.HAND);
-                    labelCategory.setFont(font2);
-                    labelCategory.setCursor(Cursor.HAND);
-                    box.getChildren().addAll(labelName, labelCategory);
-                    Label finalLabel = labelName;
-                    Label finalLabelCategory = labelCategory;
-                    box.setOnMouseEntered(e -> {
-                        finalLabel.setStyle("-fx-text-fill: mediumorchid");
-                        finalLabelCategory.setStyle("-fx-text-fill: mediumorchid");
-                    });
-                    box.setOnMouseExited(e -> {
-                        finalLabel.setStyle("-fx-text-fill: BLACK");
-                        finalLabelCategory.setStyle("-fx-text-fill: BLACK");
-                    });
+                    HBox box = setHBox(country.getCoach().getName(), "- antrenör");
                     box.setOnMouseClicked(e -> {
                         country.getCoach().makeInfoPane();
                         Main.setCenterRoot(country.getCoach().getInfoPane());
                         search.deleteText(0, searchText.length());
                     });
-                    //System.out.println(country.getCountryName());
                     gridPane.add(box, 0, column);
                     column++;
                 }
             }
         }
         pane.setContent(gridPane);
-        //Main.setBack(pane);
         Main.setCenterRoot(pane);
+    }
+
+    HBox setHBox(String name, String category){
+        Font font = Font.font("System", FontWeight.BOLD, 16);
+        Font font2 = Font.font("System", FontWeight.LIGHT, FontPosture.ITALIC, 16);
+        Label labelName, labelCategory;
+        HBox box = new HBox();
+        box.setSpacing(7);
+        labelName = new Label(name);
+        labelName.setFont(font);
+        labelName.setCursor(Cursor.HAND);
+        labelCategory = new Label(category);
+        labelCategory.setFont(font2);
+        labelCategory.setCursor(Cursor.HAND);
+        box.getChildren().addAll(labelName, labelCategory);
+        Label finalLabel = labelName;
+        Label finalLabelCategory = labelCategory;
+        box.setOnMouseEntered(e -> {
+            finalLabel.setStyle("-fx-text-fill: mediumorchid");
+            finalLabelCategory.setStyle("-fx-text-fill: mediumorchid");
+        });
+        box.setOnMouseExited(e -> {
+            finalLabel.setStyle("-fx-text-fill: BLACK");
+            finalLabelCategory.setStyle("-fx-text-fill: BLACK");
+        });
+        return box;
     }
 }
