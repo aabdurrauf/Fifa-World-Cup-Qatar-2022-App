@@ -27,9 +27,7 @@ public class OyuncularController {
                 Main.setCenterRoot(player.getInfoPane());
             };
             PlayerPane finalPlayerPane = playerPane;
-            playerPane.setOnMouseClicked(e -> {
-                finalPlayerPane.useBilgiGoster(bilgiGoster);
-            });
+            playerPane.setOnMouseClicked(e -> finalPlayerPane.useBilgiGoster(bilgiGoster));
             gridPane.add(playerPane, column, row);
             column++;
             /*playerPane.setOnMouseClicked(e -> {

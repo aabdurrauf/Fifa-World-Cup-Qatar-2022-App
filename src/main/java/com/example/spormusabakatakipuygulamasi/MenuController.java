@@ -207,8 +207,7 @@ public class MenuController {
         pane.setContent(gridPane);
         Main.setCenterRoot(pane);
     }
-
-    HBox setHBox(String name, String category){
+    public HBox setHBox(String name, String category) {
         Font font = Font.font("System", FontWeight.BOLD, 16);
         Font font2 = Font.font("System", FontWeight.LIGHT, FontPosture.ITALIC, 16);
         Label labelName, labelCategory;

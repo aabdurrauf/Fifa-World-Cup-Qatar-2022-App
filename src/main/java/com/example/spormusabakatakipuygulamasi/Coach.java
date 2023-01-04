@@ -32,7 +32,6 @@ public class Coach extends Person implements Information{
             infoPane = new CoachInfoPane(this, country);
         }
         catch (NullPointerException e){
-            infoPane = new CoachInfoPane(this, country);
             System.out.println("Kadro bilgileri bulunmuyor");
         }
     }

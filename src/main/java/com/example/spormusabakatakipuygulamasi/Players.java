@@ -69,11 +69,9 @@ public class Players extends Person implements Information{
     @Override
     public void makeInfoPane() {
         try {
-            //infoPane = new PlayerInfoPane(this, country.getCountryName());
             infoPane = new PlayerInfoPane(this, country);
         }
         catch (NullPointerException e){
-            infoPane = new PlayerInfoPane(this, country);
             System.out.println("Kadro bilgileri bulunmuyor");
         }
     }
